@@ -1,5 +1,5 @@
 {
-  "name": "js.properties",
+  "name": "@js.properties/parser",
   "version": "0.0.1",
   "author": "pallxk <github@pallxk.com>",
   "scripts": {
