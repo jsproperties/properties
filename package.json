@@ -2,11 +2,12 @@
   "name": "@js.properties/parser",
   "version": "0.0.1",
   "author": "pallxk <github@pallxk.com>",
+  "main": "dist/properties.js",
   "scripts": {
     "pegjs": "pegjs --format umd -e PropertiesParser -o dist/properties.js src/properties.pegjs"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "pegjs": "^0.10.0"
-  },
-  "devDependencies": {}
+  }
 }
