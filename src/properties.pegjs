@@ -1,46 +1,62 @@
 // Properties Parser
 // =================
-// Returns Array of [name, value] pair.
+// Returns Array of [name, value] pairs.
+
+// Properties Syntax:
+// https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-
+
 
 // File
-PropertiesFile
+PropertiesFile // property list
   = lines:Line* {
-      // Filter out empty lines and comments
+      // Filter out blank and comment lines
       return lines.filter(x => x !== undefined);
     }
 
 // Line
-Line
-  = PropertyEntry / Comment
-
-
-// Property
-PropertyEntry
-  = _ name:$PropertyName _ NameValueSeparator _ value:$PropertyValue {
-    return [name, value];
-  }
-
-PropertyName
-  = [a-zA-z]+
-
-PropertyValue
-  = C*
-
-NameValueSeparator
-  = [=:]
+Line // natural line
+  = _ line:(Comment / PropertyEntry) NL { return line; }
 
 
 // Comment
 Comment
-  = _ CommentCharacter C* {}
+  = CommentCharacter C* {}
 
-CommentCharacter
+CommentCharacter "CommentCharacter"
   = [#!]
 
 
-// Common
-C "CharacterExceptNewLine"
-  = [^\r\n]
+// Property
+PropertyEntry
+  = name:$PropertyName? NameValueSeparator? value:$PropertyValue? {
+      // Blank Line
+      if (name === "" && value === "") return;
+      // Property Entry
+      return [name, value];
+    }
 
-_ "Whitespaces"
-  = [ \t\n\r]*
+PropertyName "PropertyName" // key
+  = (ESCAPE / [^\r\n:=]) (ESCAPE / [^ \t\f\r\n:=])*
+
+PropertyValue "PropertyValue" // element
+  = (ESCAPE / C)+
+
+NameValueSeparator "NameValueSeparator"
+  = (_ [:=] / WS) _
+
+
+// Common
+_ "White Spaces"
+  = WS*
+
+ESCAPE "Escape Sequence"
+  = "\\" .
+
+WS "White Space"
+  = [ \t\f]
+
+NL "Line Terminator"
+  = "\r\n" / [\n\r]
+
+C "Character"
+  = [^\r\n]
