@@ -14,8 +14,8 @@ PropertiesFile // property list
     }
 
 // Line
-Line // natural line
-  = _ line:(Comment / PropertyEntry) NL { return line; }
+Line // logical line
+  = _ CONT* line:(Comment / PropertyEntry) NL { return line; }
 
 
 // Comment
@@ -36,27 +36,30 @@ PropertyEntry
     }
 
 PropertyName "PropertyName" // key
-  = (ESCAPE / [^\r\n:=]) (ESCAPE / [^ \t\f\r\n:=])*
+  = (ESCAPE / [^\r\n\\:=]) (CONT / ESCAPE / [^ \t\f\r\n\\:=])*
 
 PropertyValue "PropertyValue" // element
-  = (ESCAPE / C)+
+  = (CONT / ESCAPE / C)+
 
 NameValueSeparator "NameValueSeparator"
-  = (_ [:=] / WS) _
+  = CONT* (_ CONT* [:=] / WS) _ CONT*
 
 
 // Common
+WS "White Space"
+  = [ \t\f]
+
 _ "White Spaces"
   = WS*
 
-ESCAPE "Escape Sequence"
-  = "\\" .
-
-WS "White Space"
-  = [ \t\f]
+C "Character"
+  = [^\r\n]
 
 NL "Line Terminator"
   = "\r\n" / [\n\r]
 
-C "Character"
-  = [^\r\n]
+CONT "Line Continuation"
+  = "\\" NL _
+
+ESCAPE "Escape Sequence"
+  = !CONT "\\" .
