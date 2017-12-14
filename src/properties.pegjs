@@ -8,14 +8,18 @@
 
 // File
 PropertiesFile // property list
-  = lines:Line* {
+  = lines:(Line NL)* trailing:Line? {
+      // We only care the Line part; drop NL part
+      lines = lines.map(l=>l[0]);
+      // Add the trailing line, i.e. line without eol
+      if (trailing) lines.push(trailing);
       // Filter out blank and comment lines
       return lines.filter(x => x !== undefined);
     }
 
 // Line
 Line // logical line
-  = _ CONT* line:(Comment / PropertyEntry) NL { return line; }
+  = _ CONT* line:(Comment / PropertyEntry) { return line; }
 
 
 // Comment
