@@ -35,3 +35,10 @@ indent_size = 2
 [bower.json]
 indent_style = space
 indent_size = 2
+
+# Java
+# Following Google Java Style Guide
+# https://google.github.io/styleguide/javaguide.html
+[*.java]
+indent_style = space
+indent_size = 2

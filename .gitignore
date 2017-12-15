@@ -1,6 +1,9 @@
 # Node.js
 node_modules/
 
+# Java
+*.class
+
 # Built files
 dist/*
 !dist/.keep
