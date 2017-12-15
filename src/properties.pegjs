@@ -32,18 +32,18 @@ CommentCharacter "CommentCharacter"
 
 // Property
 PropertyEntry
-  = name:$PropertyName? NameValueSeparator? value:$PropertyValue? {
+  = name:PropertyName? NameValueSeparator? value:PropertyValue? {
       // Blank Line
-      if (name === "" && value === "") return;
+      if (!name && !value) return;
       // Property Entry
       return [name, value];
     }
 
 PropertyName "PropertyName" // key
-  = (ESCAPE / [^\r\n\\:=]) (CONT / ESCAPE / [^ \t\f\r\n\\:=])*
+  = a:(ESCAPE / [^\r\n\\:=]) b:(CONT{} / ESCAPE / [^ \t\f\r\n\\:=])* { return a + b.join(''); }
 
 PropertyValue "PropertyValue" // element
-  = (CONT / ESCAPE / C)+
+  = v:(CONT{} / ESCAPE / C)+ { return v.join(''); }
 
 NameValueSeparator "NameValueSeparator"
   = CONT* (_ CONT* [:=] / WS) _ CONT*
