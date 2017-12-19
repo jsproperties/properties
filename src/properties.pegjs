@@ -33,10 +33,11 @@ CommentCharacter "CommentCharacter"
 // Property
 PropertyEntry
   = name:PropertyName? NameValueSeparator? value:PropertyValue? {
-      // Blank Line
+      // Blank Line:
       if (!name && !value) return;
-      // Property Entry
-      return [name, value];
+      // Property Entry:
+      // Return an empty string for value if value is empty
+      return [name, value || ""];
     }
 
 PropertyName "PropertyName" // key
