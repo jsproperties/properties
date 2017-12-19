@@ -4,10 +4,12 @@
   "author": "pallxk <github@pallxk.com>",
   "main": "dist/properties.js",
   "scripts": {
+    "test": "tap test/js/parse.js",
     "pegjs": "pegjs --format umd -e PropertiesParser -o dist/properties.js src/properties.pegjs"
   },
   "dependencies": {},
   "devDependencies": {
-    "pegjs": "^0.10.0"
+    "pegjs": "^0.10.0",
+    "tap": "^11.0.0"
   }
 }
