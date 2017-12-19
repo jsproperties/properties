@@ -57,7 +57,10 @@ _ "White Spaces"
   = WS*
 
 C "Character"
-  = [^\r\n]
+  = c:[^\r\n] {
+      // Ignore final dangling backslash
+      return c === "\\" ? undefined : c;
+    }
 
 NL "Line Terminator"
   = "\r\n" / [\n\r]
