@@ -42,3 +42,14 @@ indent_size = 2
 [*.java]
 indent_style = space
 indent_size = 2
+
+
+# Test
+[test/data/**.properties]
+charset = unset
+end_of_line = unset
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+[test/data/**.json]
+insert_final_newline = false

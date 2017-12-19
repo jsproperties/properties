@@ -1,0 +1,18 @@
+[
+  [
+    "foo",
+    "A.B.C"
+  ],
+  [
+    "foo.bar",
+    "abc"
+  ],
+  [
+    "foo.baz",
+    "def"
+  ],
+  [
+    "qux.quux",
+    "quuz"
+  ]
+]

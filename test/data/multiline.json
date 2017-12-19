@@ -1,0 +1,18 @@
+[
+  [
+    "foo",
+    "AaBbCc"
+  ],
+  [
+    "bar001122",
+    "baz"
+  ],
+  [
+    "qux",
+    "quux"
+  ],
+  [
+    "multilinename",
+    "multiline value"
+  ]
+]
