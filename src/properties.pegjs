@@ -66,4 +66,4 @@ CONT "Line Continuation"
   = "\\" NL _
 
 ESCAPE "Escape Sequence"
-  = !CONT "\\" .
+  = !CONT "\\" . { return text(); }
