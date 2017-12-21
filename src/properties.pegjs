@@ -43,14 +43,17 @@ CommentCharacter "CommentCharacter"
   = [#!]
 
 
-// Property
+// Property (or blank line)
 PropertyEntry
-  = name:PropertyName? NameValueSeparator? value:PropertyValue? {
+  = name:PropertyName? sep:$NameValueSeparator? value:PropertyValue? {
       // Blank Line:
-      if (!name && !value) return;
+      // No need to test value, as whenever there is a value, there is a separator.
+      // Note: Name and value can be empty at the same time.
+      if (!name && !sep) return;
+
       // Property Entry:
-      // Return an empty string for value if value is empty
-      return [name, value || ""];
+      // Return an empty string for name and/or value if empty.
+      return [name || "", value || ""];
     }
 
 PropertyName "PropertyName" // key
