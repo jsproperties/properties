@@ -1,10 +1,18 @@
 // Properties Parser
 // =================
-// Returns Array of [name, value] pairs.
+// Returns Array of [name, value, [original], [location]] pairs.
 
 // Properties Syntax:
 // https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-
 
+{
+  // Whether to include blank and comment lines
+  //options.all = true;
+  // Whether to include the original logical line
+  //options.original = true;
+  // Whether to include location info
+  //options.location = true;
+}
 
 // File
 PropertiesFile // property list
@@ -19,7 +27,12 @@ PropertiesFile // property list
 
 // Line
 Line // logical line
-  = _ CONT* line:(Comment / PropertyEntry) { return line; }
+  = _ CONT* line:(Comment / PropertyEntry) {
+      if (options.all && !line) line = [null, null];
+      if (options.original && line) line.push(text());
+      if (options.location && line) line.push(location());
+      return line;
+    }
 
 
 // Comment
