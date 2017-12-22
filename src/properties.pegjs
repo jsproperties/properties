@@ -1,6 +1,6 @@
 // Properties Parser
 // =================
-// Returns Array of [name, value, [original], [location]] pairs.
+// Returns Array of [key, element, [original], [location]] pairs.
 
 // Properties Syntax:
 // https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-
@@ -45,24 +45,24 @@ CommentCharacter "CommentCharacter"
 
 // Property (or blank line)
 PropertyEntry
-  = name:PropertyName? sep:$NameValueSeparator? value:PropertyValue? {
+  = key:PropertyKey? sep:$KeyElementSeparator? element:PropertyElement? {
       // Blank Line:
-      // No need to test value, as whenever there is a value, there is a separator.
-      // Note: Name and value can be empty at the same time.
-      if (!name && !sep) return;
+      // No need to test element, as whenever there is an element, there is a separator.
+      // Note: Key and element can be empty at the same time.
+      if (!key && !sep) return;
 
       // Property Entry:
-      // Return an empty string for name and/or value if empty.
-      return [name || "", value || ""];
+      // Return an empty string for key and/or element if empty.
+      return [key || "", element || ""];
     }
 
-PropertyName "PropertyName" // key
+PropertyKey "PropertyKey"
   = a:(ESCAPE / [^\r\n\\:=]) b:(CONT{} / ESCAPE / [^ \t\f\r\n\\:=])* { return a + b.join(''); }
 
-PropertyValue "PropertyValue" // element
+PropertyElement "PropertyElement"
   = v:(CONT{} / ESCAPE / C)+ { return v.join(''); }
 
-NameValueSeparator "NameValueSeparator"
+KeyElementSeparator "KeyElementSeparator"
   = CONT* (_ CONT* [:=] / WS) _ CONT*
 
 
