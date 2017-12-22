@@ -1,18 +1,87 @@
 [
   [
     "foo",
-    "A.B.C"
+    "A.B.C",
+    "foo = A.B.C",
+    {
+      "start": {
+        "offset": 0,
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "offset": 11,
+        "line": 1,
+        "column": 12
+      }
+    }
   ],
   [
     "foo.bar",
-    "abc"
+    "abc",
+    "foo.bar : abc",
+    {
+      "start": {
+        "offset": 12,
+        "line": 2,
+        "column": 1
+      },
+      "end": {
+        "offset": 25,
+        "line": 2,
+        "column": 14
+      }
+    }
   ],
   [
     "foo.baz",
-    "def"
+    "def",
+    "foo.baz   def",
+    {
+      "start": {
+        "offset": 26,
+        "line": 3,
+        "column": 1
+      },
+      "end": {
+        "offset": 39,
+        "line": 3,
+        "column": 14
+      }
+    }
   ],
   [
     "qux.quux",
-    "quuz"
+    "quuz",
+    "qux.quux = quuz",
+    {
+      "start": {
+        "offset": 40,
+        "line": 4,
+        "column": 1
+      },
+      "end": {
+        "offset": 55,
+        "line": 4,
+        "column": 16
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 56,
+        "line": 5,
+        "column": 1
+      },
+      "end": {
+        "offset": 56,
+        "line": 5,
+        "column": 1
+      }
+    }
   ]
 ]

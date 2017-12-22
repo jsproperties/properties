@@ -1,10 +1,53 @@
 [
   [
+    null,
+    null,
+    "# LF as the line terminator; no final eol",
+    {
+      "start": {
+        "offset": 0,
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "offset": 41,
+        "line": 1,
+        "column": 42
+      }
+    }
+  ],
+  [
     "foo",
-    "bar"
+    "bar",
+    "foo = bar",
+    {
+      "start": {
+        "offset": 42,
+        "line": 2,
+        "column": 1
+      },
+      "end": {
+        "offset": 51,
+        "line": 2,
+        "column": 10
+      }
+    }
   ],
   [
     "baz",
-    "qux"
+    "qux",
+    "baz = qux",
+    {
+      "start": {
+        "offset": 52,
+        "line": 3,
+        "column": 1
+      },
+      "end": {
+        "offset": 61,
+        "line": 3,
+        "column": 10
+      }
+    }
   ]
 ]

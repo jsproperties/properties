@@ -1,14 +1,70 @@
 [
   [
     "foo",
-    "a b\tc   "
+    "a b\tc   ",
+    "foo \t=\fa b\tc   ",
+    {
+      "start": {
+        "offset": 0,
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "offset": 15,
+        "line": 1,
+        "column": 16
+      }
+    }
   ],
   [
     "bar",
-    "d\te\tf\t  \t"
+    "d\te\tf\t  \t",
+    "bar : d\te\tf\t  \t",
+    {
+      "start": {
+        "offset": 16,
+        "line": 2,
+        "column": 1
+      },
+      "end": {
+        "offset": 31,
+        "line": 2,
+        "column": 16
+      }
+    }
   ],
   [
     "baz",
-    "g\fh\fi\f\t\f \f"
+    "g\fh\fi\f\t\f \f",
+    "baz\fg\fh\fi\f\t\f \f",
+    {
+      "start": {
+        "offset": 32,
+        "line": 3,
+        "column": 1
+      },
+      "end": {
+        "offset": 46,
+        "line": 3,
+        "column": 15
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 47,
+        "line": 4,
+        "column": 1
+      },
+      "end": {
+        "offset": 47,
+        "line": 4,
+        "column": 1
+      }
+    }
   ]
 ]

@@ -1,14 +1,104 @@
 [
   [
+    null,
+    null,
+    "# CR or LF or CRLF as the line terminator",
+    {
+      "start": {
+        "offset": 0,
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "offset": 41,
+        "line": 1,
+        "column": 42
+      }
+    }
+  ],
+  [
     "foo",
-    "bar"
+    "bar",
+    "foo = bar",
+    {
+      "start": {
+        "offset": 42,
+        "line": 1,
+        "column": 43
+      },
+      "end": {
+        "offset": 51,
+        "line": 1,
+        "column": 52
+      }
+    }
   ],
   [
     "baz",
-    "qux"
+    "qux",
+    "baz = qux",
+    {
+      "start": {
+        "offset": 52,
+        "line": 2,
+        "column": 1
+      },
+      "end": {
+        "offset": 61,
+        "line": 2,
+        "column": 10
+      }
+    }
   ],
   [
     "quux",
-    "quuz"
+    "quuz",
+    "quux = quuz",
+    {
+      "start": {
+        "offset": 63,
+        "line": 3,
+        "column": 1
+      },
+      "end": {
+        "offset": 74,
+        "line": 3,
+        "column": 12
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 75,
+        "line": 4,
+        "column": 1
+      },
+      "end": {
+        "offset": 75,
+        "line": 4,
+        "column": 1
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 76,
+        "line": 4,
+        "column": 2
+      },
+      "end": {
+        "offset": 76,
+        "line": 4,
+        "column": 2
+      }
+    }
   ]
 ]

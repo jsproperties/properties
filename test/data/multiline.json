@@ -1,18 +1,206 @@
 [
   [
+    null,
+    null,
+    "# Multiline value",
+    {
+      "start": {
+        "offset": 0,
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "offset": 17,
+        "line": 1,
+        "column": 18
+      }
+    }
+  ],
+  [
     "foo",
-    "AaBbCc"
+    "AaBbCc",
+    "foo = Aa\\\n  Bb\\\nCc",
+    {
+      "start": {
+        "offset": 18,
+        "line": 2,
+        "column": 1
+      },
+      "end": {
+        "offset": 36,
+        "line": 4,
+        "column": 3
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 37,
+        "line": 5,
+        "column": 1
+      },
+      "end": {
+        "offset": 37,
+        "line": 5,
+        "column": 1
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "# Multiline name",
+    {
+      "start": {
+        "offset": 38,
+        "line": 6,
+        "column": 1
+      },
+      "end": {
+        "offset": 54,
+        "line": 6,
+        "column": 17
+      }
+    }
   ],
   [
     "bar001122",
-    "baz"
+    "baz",
+    "bar\\\n  00\\\n11\\\n  22 : baz",
+    {
+      "start": {
+        "offset": 55,
+        "line": 7,
+        "column": 1
+      },
+      "end": {
+        "offset": 80,
+        "line": 10,
+        "column": 11
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 81,
+        "line": 11,
+        "column": 1
+      },
+      "end": {
+        "offset": 81,
+        "line": 11,
+        "column": 1
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "# Multiline separator",
+    {
+      "start": {
+        "offset": 82,
+        "line": 12,
+        "column": 1
+      },
+      "end": {
+        "offset": 103,
+        "line": 12,
+        "column": 22
+      }
+    }
   ],
   [
     "qux",
-    "quux"
+    "quux",
+    "qux \\\n = \\\n  quux",
+    {
+      "start": {
+        "offset": 104,
+        "line": 13,
+        "column": 1
+      },
+      "end": {
+        "offset": 121,
+        "line": 15,
+        "column": 7
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 122,
+        "line": 16,
+        "column": 1
+      },
+      "end": {
+        "offset": 122,
+        "line": 16,
+        "column": 1
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "# Multiline name/value/separator",
+    {
+      "start": {
+        "offset": 123,
+        "line": 17,
+        "column": 1
+      },
+      "end": {
+        "offset": 155,
+        "line": 17,
+        "column": 33
+      }
+    }
   ],
   [
     "multilinename",
-    "multiline value"
+    "multiline value",
+    "multiline\\\n name \\\nmultiline \\\n value",
+    {
+      "start": {
+        "offset": 156,
+        "line": 18,
+        "column": 1
+      },
+      "end": {
+        "offset": 193,
+        "line": 21,
+        "column": 7
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 194,
+        "line": 22,
+        "column": 1
+      },
+      "end": {
+        "offset": 194,
+        "line": 22,
+        "column": 1
+      }
+    }
   ]
 ]

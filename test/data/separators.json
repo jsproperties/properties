@@ -1,58 +1,393 @@
 [
   [
+    null,
+    null,
+    "# Separated by equal sign (=)",
+    {
+      "start": {
+        "offset": 0,
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "offset": 29,
+        "line": 1,
+        "column": 30
+      }
+    }
+  ],
+  [
     "foo1",
-    "bar1"
+    "bar1",
+    "foo1=bar1",
+    {
+      "start": {
+        "offset": 30,
+        "line": 2,
+        "column": 1
+      },
+      "end": {
+        "offset": 39,
+        "line": 2,
+        "column": 10
+      }
+    }
   ],
   [
     "foo2",
-    "bar2"
+    "bar2",
+    "foo2 =bar2",
+    {
+      "start": {
+        "offset": 40,
+        "line": 3,
+        "column": 1
+      },
+      "end": {
+        "offset": 50,
+        "line": 3,
+        "column": 11
+      }
+    }
   ],
   [
     "foo3",
-    "bar3"
+    "bar3",
+    "foo3= bar3",
+    {
+      "start": {
+        "offset": 51,
+        "line": 4,
+        "column": 1
+      },
+      "end": {
+        "offset": 61,
+        "line": 4,
+        "column": 11
+      }
+    }
   ],
   [
     "foo4",
-    "bar4"
+    "bar4",
+    "foo4 = bar4",
+    {
+      "start": {
+        "offset": 62,
+        "line": 5,
+        "column": 1
+      },
+      "end": {
+        "offset": 73,
+        "line": 5,
+        "column": 12
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 74,
+        "line": 6,
+        "column": 1
+      },
+      "end": {
+        "offset": 74,
+        "line": 6,
+        "column": 1
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "# Separated by colon (:)",
+    {
+      "start": {
+        "offset": 75,
+        "line": 7,
+        "column": 1
+      },
+      "end": {
+        "offset": 99,
+        "line": 7,
+        "column": 25
+      }
+    }
   ],
   [
     "foo5",
-    "bar5"
+    "bar5",
+    "foo5:bar5",
+    {
+      "start": {
+        "offset": 100,
+        "line": 8,
+        "column": 1
+      },
+      "end": {
+        "offset": 109,
+        "line": 8,
+        "column": 10
+      }
+    }
   ],
   [
     "foo6",
-    "bar6"
+    "bar6",
+    "foo6 :bar6",
+    {
+      "start": {
+        "offset": 110,
+        "line": 9,
+        "column": 1
+      },
+      "end": {
+        "offset": 120,
+        "line": 9,
+        "column": 11
+      }
+    }
   ],
   [
     "foo7",
-    "bar7"
+    "bar7",
+    "foo7: bar7",
+    {
+      "start": {
+        "offset": 121,
+        "line": 10,
+        "column": 1
+      },
+      "end": {
+        "offset": 131,
+        "line": 10,
+        "column": 11
+      }
+    }
   ],
   [
     "foo8",
-    "bar8"
+    "bar8",
+    "foo8 : bar8",
+    {
+      "start": {
+        "offset": 132,
+        "line": 11,
+        "column": 1
+      },
+      "end": {
+        "offset": 143,
+        "line": 11,
+        "column": 12
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 144,
+        "line": 12,
+        "column": 1
+      },
+      "end": {
+        "offset": 144,
+        "line": 12,
+        "column": 1
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "# Separated by white spaces ([ \\t\\f])",
+    {
+      "start": {
+        "offset": 145,
+        "line": 13,
+        "column": 1
+      },
+      "end": {
+        "offset": 182,
+        "line": 13,
+        "column": 38
+      }
+    }
   ],
   [
     "foo9",
-    "bar9"
+    "bar9",
+    "foo9 bar9",
+    {
+      "start": {
+        "offset": 183,
+        "line": 14,
+        "column": 1
+      },
+      "end": {
+        "offset": 192,
+        "line": 14,
+        "column": 10
+      }
+    }
   ],
   [
     "foo10",
-    "bar10"
+    "bar10",
+    "foo10\tbar10",
+    {
+      "start": {
+        "offset": 193,
+        "line": 15,
+        "column": 1
+      },
+      "end": {
+        "offset": 204,
+        "line": 15,
+        "column": 12
+      }
+    }
   ],
   [
     "foo11",
-    "bar11"
+    "bar11",
+    "foo11\fbar11",
+    {
+      "start": {
+        "offset": 205,
+        "line": 16,
+        "column": 1
+      },
+      "end": {
+        "offset": 216,
+        "line": 16,
+        "column": 12
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 217,
+        "line": 17,
+        "column": 1
+      },
+      "end": {
+        "offset": 217,
+        "line": 17,
+        "column": 1
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "# Separated by new lines ([\\r\\n]) (empty value)",
+    {
+      "start": {
+        "offset": 218,
+        "line": 18,
+        "column": 1
+      },
+      "end": {
+        "offset": 265,
+        "line": 18,
+        "column": 48
+      }
+    }
   ],
   [
     "foo12",
-    ""
+    "",
+    "foo12",
+    {
+      "start": {
+        "offset": 266,
+        "line": 19,
+        "column": 1
+      },
+      "end": {
+        "offset": 271,
+        "line": 19,
+        "column": 6
+      }
+    }
   ],
   [
     "foo13",
-    ""
+    "",
+    "foo13",
+    {
+      "start": {
+        "offset": 272,
+        "line": 20,
+        "column": 1
+      },
+      "end": {
+        "offset": 277,
+        "line": 20,
+        "column": 6
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 278,
+        "line": 21,
+        "column": 1
+      },
+      "end": {
+        "offset": 278,
+        "line": 21,
+        "column": 1
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "# Separated by eof (empty value)",
+    {
+      "start": {
+        "offset": 279,
+        "line": 22,
+        "column": 1
+      },
+      "end": {
+        "offset": 311,
+        "line": 22,
+        "column": 33
+      }
+    }
   ],
   [
     "foo14",
-    ""
+    "",
+    "foo14",
+    {
+      "start": {
+        "offset": 312,
+        "line": 23,
+        "column": 1
+      },
+      "end": {
+        "offset": 317,
+        "line": 23,
+        "column": 6
+      }
+    }
   ]
 ]

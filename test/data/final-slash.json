@@ -1,14 +1,70 @@
 [
   [
     "foo",
-    "a\\\\b"
+    "a\\\\b",
+    "foo = a\\\\\\\n  b",
+    {
+      "start": {
+        "offset": 0,
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "offset": 14,
+        "line": 2,
+        "column": 4
+      }
+    }
+  ],
+  [
+    null,
+    null,
+    "",
+    {
+      "start": {
+        "offset": 15,
+        "line": 3,
+        "column": 1
+      },
+      "end": {
+        "offset": 15,
+        "line": 3,
+        "column": 1
+      }
+    }
   ],
   [
     "bar",
-    "z"
+    "z",
+    "bar = z\\\n",
+    {
+      "start": {
+        "offset": 16,
+        "line": 4,
+        "column": 1
+      },
+      "end": {
+        "offset": 25,
+        "line": 5,
+        "column": 1
+      }
+    }
   ],
   [
     "baz",
-    "shh"
+    "shh",
+    "baz = shh\\",
+    {
+      "start": {
+        "offset": 26,
+        "line": 6,
+        "column": 1
+      },
+      "end": {
+        "offset": 36,
+        "line": 6,
+        "column": 11
+      }
+    }
   ]
 ]
