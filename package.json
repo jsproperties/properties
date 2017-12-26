@@ -2,15 +2,26 @@
   "name": "@js.properties/parser",
   "version": "0.0.1",
   "author": "pallxk <github@pallxk.com>",
-  "main": "dist/properties.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "tap test/js/parse.js",
-    "pegjs": "pegjs --format umd -e PropertiesParser -o dist/properties.js src/properties.pegjs"
+    "pegjs": "pegjs --format umd -e PropertiesParser -o src/properties.pegjs.js src/properties.pegjs",
+    "babel": "babel --retain-lines -d lib src",
+    "webpack": "webpack --config webpack.prod.js"
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "lodash": "^4.17.4",
     "pegjs": "^0.10.0",
-    "tap": "^11.0.0"
+    "pegjs-loader": "^0.5.4",
+    "tap": "^11.0.0",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
   }
 }

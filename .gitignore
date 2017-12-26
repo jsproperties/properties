@@ -5,5 +5,7 @@ node_modules/
 *.class
 
 # Built files
-dist/*
-!dist/.keep
+/src/properties.pegjs.js
+/lib/*
+/dist/*
+!.keep
