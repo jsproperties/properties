@@ -3,5 +3,9 @@ const merge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
-  devtool: 'inline-source-map',
+  output: {
+    filename: 'properties-parser.js',
+    sourceMapFilename: 'properties-parser.map',
+  },
+  devtool: 'source-map',
 });
