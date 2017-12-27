@@ -15,8 +15,8 @@
   "scripts": {
     "test": "tap test/js/parse.js",
     "prepare": "yon run pegjs && yon run babel && yon run webpack",
-    "pegjs": "pegjs --format umd -e PropertiesParser -o src/properties.pegjs.js src/properties.pegjs",
-    "babel": "babel --retain-lines -d lib src",
+    "pegjs": "pegjs -o src/properties.pegjs.js src/properties.pegjs",
+    "babel": "babel -d lib src",
     "webpack": "webpack --config webpack.dev.js && webpack --config webpack.prod.js"
   },
   "dependencies": {},
