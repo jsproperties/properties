@@ -44,6 +44,14 @@ indent_style = space
 indent_size = 2
 
 
+# Markdown
+[*.{md,markdown}]
+# Many Markdown processors assume that tab stops are set at multiples of four.
+indent_size = 4
+# Trailing whitespaces are significant to Markdown documents in some syntax.
+trim_trailing_whitespace = false
+
+
 # Test
 [test/data/**.properties]
 charset = unset
