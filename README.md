@@ -45,7 +45,7 @@ const options = {   // options is optional
   original: true,   // Include original logical line in output
   location: true,   // Include location info in output
 };
-let output = PropertiesParser.parse(input, options);
+let output = PropertiesParser.parseToArray(input, options);
 ```
 
 `demo.html` (Browser):
@@ -55,7 +55,7 @@ let output = PropertiesParser.parse(input, options);
 <script src="properties-parser.min.js"></script>
 <script>
 // Input can be entered manually or read via FileReader API
-var output = PropertiesParser.parse('...');
+var output = PropertiesParser.parseToArray('...');
 </script>
 ```
 
@@ -99,10 +99,23 @@ Output with all options on:
 ]
 ```
 
+There is also a method `parseToProperties(input)` which generates ouput like:
+
+```
+{
+  "hello": "world",
+  "foo": "bar"
+}
+```
+
 
 ## API
 
-### Method: parse(string [, options ])
+### Method: parseToProperties(string)
+
+**Returns:** `object`
+
+### Method: parseToArray(string [, options ])
 
 **Returns:** `Array<PropertyEntry>`
 
