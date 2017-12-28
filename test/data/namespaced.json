@@ -1,9 +1,9 @@
 [
-  [
-    "foo",
-    "A.B.C",
-    "foo = A.B.C",
-    {
+  {
+    "key": "foo",
+    "element": "A.B.C",
+    "original": "foo = A.B.C",
+    "location": {
       "start": {
         "offset": 0,
         "line": 1,
@@ -15,12 +15,12 @@
         "column": 12
       }
     }
-  ],
-  [
-    "foo.bar",
-    "abc",
-    "foo.bar : abc",
-    {
+  },
+  {
+    "key": "foo.bar",
+    "element": "abc",
+    "original": "foo.bar : abc",
+    "location": {
       "start": {
         "offset": 12,
         "line": 2,
@@ -32,12 +32,12 @@
         "column": 14
       }
     }
-  ],
-  [
-    "foo.baz",
-    "def",
-    "foo.baz   def",
-    {
+  },
+  {
+    "key": "foo.baz",
+    "element": "def",
+    "original": "foo.baz   def",
+    "location": {
       "start": {
         "offset": 26,
         "line": 3,
@@ -49,12 +49,12 @@
         "column": 14
       }
     }
-  ],
-  [
-    "qux.quux",
-    "quuz",
-    "qux.quux = quuz",
-    {
+  },
+  {
+    "key": "qux.quux",
+    "element": "quuz",
+    "original": "qux.quux = quuz",
+    "location": {
       "start": {
         "offset": 40,
         "line": 4,
@@ -66,12 +66,12 @@
         "column": 16
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 56,
         "line": 5,
@@ -83,5 +83,5 @@
         "column": 1
       }
     }
-  ]
+  }
 ]

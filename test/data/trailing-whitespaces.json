@@ -1,9 +1,9 @@
 [
-  [
-    "foo",
-    "a b\tc   ",
-    "foo \t=\fa b\tc   ",
-    {
+  {
+    "key": "foo",
+    "element": "a b\tc   ",
+    "original": "foo \t=\fa b\tc   ",
+    "location": {
       "start": {
         "offset": 0,
         "line": 1,
@@ -15,12 +15,12 @@
         "column": 16
       }
     }
-  ],
-  [
-    "bar",
-    "d\te\tf\t  \t",
-    "bar : d\te\tf\t  \t",
-    {
+  },
+  {
+    "key": "bar",
+    "element": "d\te\tf\t  \t",
+    "original": "bar : d\te\tf\t  \t",
+    "location": {
       "start": {
         "offset": 16,
         "line": 2,
@@ -32,12 +32,12 @@
         "column": 16
       }
     }
-  ],
-  [
-    "baz",
-    "g\fh\fi\f\t\f \f",
-    "baz\fg\fh\fi\f\t\f \f",
-    {
+  },
+  {
+    "key": "baz",
+    "element": "g\fh\fi\f\t\f \f",
+    "original": "baz\fg\fh\fi\f\t\f \f",
+    "location": {
       "start": {
         "offset": 32,
         "line": 3,
@@ -49,12 +49,12 @@
         "column": 15
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 47,
         "line": 4,
@@ -66,5 +66,5 @@
         "column": 1
       }
     }
-  ]
+  }
 ]

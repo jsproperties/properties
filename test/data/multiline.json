@@ -1,9 +1,9 @@
 [
-  [
-    null,
-    null,
-    "# Multiline element",
-    {
+  {
+    "key": null,
+    "element": null,
+    "original": "# Multiline element",
+    "location": {
       "start": {
         "offset": 0,
         "line": 1,
@@ -15,12 +15,12 @@
         "column": 20
       }
     }
-  ],
-  [
-    "foo",
-    "AaBbCc",
-    "foo = Aa\\\n  Bb\\\nCc",
-    {
+  },
+  {
+    "key": "foo",
+    "element": "AaBbCc",
+    "original": "foo = Aa\\\n  Bb\\\nCc",
+    "location": {
       "start": {
         "offset": 20,
         "line": 2,
@@ -32,12 +32,12 @@
         "column": 3
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 39,
         "line": 5,
@@ -49,12 +49,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Multiline key",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Multiline key",
+    "location": {
       "start": {
         "offset": 40,
         "line": 6,
@@ -66,12 +66,12 @@
         "column": 16
       }
     }
-  ],
-  [
-    "bar001122",
-    "baz",
-    "bar\\\n  00\\\n11\\\n  22 : baz",
-    {
+  },
+  {
+    "key": "bar001122",
+    "element": "baz",
+    "original": "bar\\\n  00\\\n11\\\n  22 : baz",
+    "location": {
       "start": {
         "offset": 56,
         "line": 7,
@@ -83,12 +83,12 @@
         "column": 11
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 82,
         "line": 11,
@@ -100,12 +100,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Multiline separator",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Multiline separator",
+    "location": {
       "start": {
         "offset": 83,
         "line": 12,
@@ -117,12 +117,12 @@
         "column": 22
       }
     }
-  ],
-  [
-    "qux",
-    "quux",
-    "qux \\\n = \\\n  quux",
-    {
+  },
+  {
+    "key": "qux",
+    "element": "quux",
+    "original": "qux \\\n = \\\n  quux",
+    "location": {
       "start": {
         "offset": 105,
         "line": 13,
@@ -134,12 +134,12 @@
         "column": 7
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 123,
         "line": 16,
@@ -151,12 +151,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Multiline key/element/separator",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Multiline key/element/separator",
+    "location": {
       "start": {
         "offset": 124,
         "line": 17,
@@ -168,12 +168,12 @@
         "column": 34
       }
     }
-  ],
-  [
-    "multilinename",
-    "multiline value",
-    "multiline\\\n name \\\nmultiline \\\n value",
-    {
+  },
+  {
+    "key": "multilinename",
+    "element": "multiline value",
+    "original": "multiline\\\n name \\\nmultiline \\\n value",
+    "location": {
       "start": {
         "offset": 158,
         "line": 18,
@@ -185,12 +185,12 @@
         "column": 7
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 196,
         "line": 22,
@@ -202,5 +202,5 @@
         "column": 1
       }
     }
-  ]
+  }
 ]

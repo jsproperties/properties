@@ -1,9 +1,9 @@
 [
-  [
-    null,
-    null,
-    "# LF as the line terminator; no final eol",
-    {
+  {
+    "key": null,
+    "element": null,
+    "original": "# LF as the line terminator; no final eol",
+    "location": {
       "start": {
         "offset": 0,
         "line": 1,
@@ -15,12 +15,12 @@
         "column": 42
       }
     }
-  ],
-  [
-    "foo",
-    "bar",
-    "foo = bar",
-    {
+  },
+  {
+    "key": "foo",
+    "element": "bar",
+    "original": "foo = bar",
+    "location": {
       "start": {
         "offset": 42,
         "line": 2,
@@ -32,12 +32,12 @@
         "column": 10
       }
     }
-  ],
-  [
-    "baz",
-    "qux",
-    "baz = qux",
-    {
+  },
+  {
+    "key": "baz",
+    "element": "qux",
+    "original": "baz = qux",
+    "location": {
       "start": {
         "offset": 52,
         "line": 3,
@@ -49,5 +49,5 @@
         "column": 10
       }
     }
-  ]
+  }
 ]

@@ -1,9 +1,9 @@
 [
-  [
-    null,
-    null,
-    "# Duplicate keys",
-    {
+  {
+    "key": null,
+    "element": null,
+    "original": "# Duplicate keys",
+    "location": {
       "start": {
         "offset": 0,
         "line": 1,
@@ -15,12 +15,12 @@
         "column": 17
       }
     }
-  ],
-  [
-    "foo",
-    "bar",
-    "foo = bar",
-    {
+  },
+  {
+    "key": "foo",
+    "element": "bar",
+    "original": "foo = bar",
+    "location": {
       "start": {
         "offset": 17,
         "line": 2,
@@ -32,12 +32,12 @@
         "column": 10
       }
     }
-  ],
-  [
-    "foo",
-    "baz",
-    "foo = baz",
-    {
+  },
+  {
+    "key": "foo",
+    "element": "baz",
+    "original": "foo = baz",
+    "location": {
       "start": {
         "offset": 27,
         "line": 3,
@@ -49,12 +49,12 @@
         "column": 10
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 37,
         "line": 4,
@@ -66,12 +66,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Duplicate elements",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Duplicate elements",
+    "location": {
       "start": {
         "offset": 38,
         "line": 5,
@@ -83,12 +83,12 @@
         "column": 21
       }
     }
-  ],
-  [
-    "qux",
-    "quuz",
-    "qux = quuz",
-    {
+  },
+  {
+    "key": "qux",
+    "element": "quuz",
+    "original": "qux = quuz",
+    "location": {
       "start": {
         "offset": 59,
         "line": 6,
@@ -100,12 +100,12 @@
         "column": 11
       }
     }
-  ],
-  [
-    "quux",
-    "quuz",
-    "quux = quuz",
-    {
+  },
+  {
+    "key": "quux",
+    "element": "quuz",
+    "original": "quux = quuz",
+    "location": {
       "start": {
         "offset": 70,
         "line": 7,
@@ -117,12 +117,12 @@
         "column": 12
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 82,
         "line": 8,
@@ -134,12 +134,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Duplicate key and element pairs",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Duplicate key and element pairs",
+    "location": {
       "start": {
         "offset": 83,
         "line": 9,
@@ -151,12 +151,12 @@
         "column": 34
       }
     }
-  ],
-  [
-    "dup",
-    "duplicate",
-    "dup = duplicate",
-    {
+  },
+  {
+    "key": "dup",
+    "element": "duplicate",
+    "original": "dup = duplicate",
+    "location": {
       "start": {
         "offset": 117,
         "line": 10,
@@ -168,12 +168,12 @@
         "column": 16
       }
     }
-  ],
-  [
-    "dup",
-    "duplicate",
-    "dup : duplicate",
-    {
+  },
+  {
+    "key": "dup",
+    "element": "duplicate",
+    "original": "dup : duplicate",
+    "location": {
       "start": {
         "offset": 133,
         "line": 11,
@@ -185,12 +185,12 @@
         "column": 16
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 149,
         "line": 12,
@@ -202,5 +202,5 @@
         "column": 1
       }
     }
-  ]
+  }
 ]

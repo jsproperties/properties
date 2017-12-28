@@ -28,9 +28,17 @@ PropertiesFile // property list
 // Line
 Line // logical line
   = _ CONT* line:(Comment / PropertyEntry) {
-      if (options.all && !line) line = [null, null];
-      if (options.original && line) line.push(text());
-      if (options.location && line) line.push(location());
+      if (!line) {
+        if (options.all) {
+          line = { key: null, element: null };
+        } else {
+          return undefined;
+        }
+      }
+
+      if (options.original) line.original = text();
+      if (options.location) line.location = location();
+
       return line;
     }
 
@@ -53,7 +61,7 @@ PropertyEntry
 
       // Property Entry:
       // Return an empty string for key and/or element if empty.
-      return [key || "", element || ""];
+      return { key: key || "", element: element || "" };
     }
 
 PropertyKey "PropertyKey"

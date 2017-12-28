@@ -63,8 +63,8 @@ Output with all options off:
 
 ```json
 [
-   [ "hello", "world" ],
-   [ "foo", "bar" ]
+  { "key": "hello", "element": "world" },
+  { "key": "foo", "element": "bar" }
 ]
 ```
 
@@ -72,21 +72,30 @@ Output with all options on:
 
 ```json
 [
-  [ null, null, "# Comment here",
-    { "start": { "offset":  0, "line": 1, "column":  1 },
-      "end":   { "offset": 14, "line": 1, "column": 15 } } ],
-  [ "hello", "world", "hello = world",
-    { "start": { "offset": 15, "line": 2, "column":  1 },
-      "end":   { "offset": 28, "line": 2, "column": 14 } } ],
-  [ null, null, "", 
-    { "start": { "offset": 29, "line": 3, "column":  1 }, 
-      "end":   { "offset": 29, "line": 3, "column":  1 } } ],
-  [ "foo", "bar", "foo : bar",
-    { "start": { "offset": 30, "line": 4, "column":  1 },
-      "end":   { "offset": 39, "line": 4, "column": 10 } } ],
-  [ null, null, "",
-    { "start": { "offset": 40, "line": 5, "column":  1 },
-      "end":   { "offset": 40, "line": 5, "column":  1 } } ]
+  {
+    "key": null, "element": null, "original": "# Comment here",
+    "location": {
+      "start": { "offset":  0, "line": 1, "column":  1 },
+      "end":   { "offset": 14, "line": 1, "column": 15 } }
+  },
+  {
+    "key": "hello", "element": "world", "original": "hello = world",
+    "location": {
+      "start": { "offset": 15, "line": 2, "column":  1 },
+      "end":   { "offset": 28, "line": 2, "column": 14 } }
+  },
+  {
+    "key": null, "element": null, "original": "",
+    "location": {
+      "start": { "offset": 29, "line": 3, "column":  1 },
+      "end":   { "offset": 29, "line": 3, "column":  1 } }
+  },
+  {
+    "key": "foo", "element": "bar", "original": "foo : bar",
+    "location": {
+      "start": { "offset": 30, "line": 4, "column":  1 },
+      "end":   { "offset": 39, "line": 4, "column": 10 } }
+  }
 ]
 ```
 
@@ -97,9 +106,9 @@ Output with all options on:
 
 **Returns:** `Array<PropertyEntry>`
 
-### Array: PropertyEntry: `[ key, element [, original ] [, location ] ]`
+### Object: PropertyEntry
 
--          | Type         | Description
+Property   | Type         | Description
 ---------- | ------------ | ----
 `key`      | string\|null | Property Key
 `element`  | string\|null | Property Element (value)

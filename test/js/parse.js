@@ -58,14 +58,14 @@ filenames.forEach(filename => {
       // Calculate what's expected based on parser options
       if (!options.all) {
         expectedEntries = _.filter(expectedEntries, e => {
-          return e[0] != null && e[1] != null;
+          return e.key != null && e.element != null;
         });
       }
       if (!options.original) {
-       expectedEntries.forEach(e => e.splice(2, 1));
+       expectedEntries.forEach(e => delete e.original);
       }
       if (!options.location) {
-        expectedEntries.forEach(e => e.splice(-1, 1));
+        expectedEntries.forEach(e => delete e.location);
       }
 
       // Do the test

@@ -1,9 +1,9 @@
 [
-  [
-    null,
-    null,
-    "# CR or LF or CRLF as the line terminator",
-    {
+  {
+    "key": null,
+    "element": null,
+    "original": "# CR or LF or CRLF as the line terminator",
+    "location": {
       "start": {
         "offset": 0,
         "line": 1,
@@ -15,12 +15,12 @@
         "column": 42
       }
     }
-  ],
-  [
-    "foo",
-    "bar",
-    "foo = bar",
-    {
+  },
+  {
+    "key": "foo",
+    "element": "bar",
+    "original": "foo = bar",
+    "location": {
       "start": {
         "offset": 42,
         "line": 1,
@@ -32,12 +32,12 @@
         "column": 52
       }
     }
-  ],
-  [
-    "baz",
-    "qux",
-    "baz = qux",
-    {
+  },
+  {
+    "key": "baz",
+    "element": "qux",
+    "original": "baz = qux",
+    "location": {
       "start": {
         "offset": 52,
         "line": 2,
@@ -49,12 +49,12 @@
         "column": 10
       }
     }
-  ],
-  [
-    "quux",
-    "quuz",
-    "quux = quuz",
-    {
+  },
+  {
+    "key": "quux",
+    "element": "quuz",
+    "original": "quux = quuz",
+    "location": {
       "start": {
         "offset": 63,
         "line": 3,
@@ -66,12 +66,12 @@
         "column": 12
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 75,
         "line": 4,
@@ -83,12 +83,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 76,
         "line": 4,
@@ -100,5 +100,5 @@
         "column": 2
       }
     }
-  ]
+  }
 ]

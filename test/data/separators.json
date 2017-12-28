@@ -1,9 +1,9 @@
 [
-  [
-    null,
-    null,
-    "# Separated by equal sign (=)",
-    {
+  {
+    "key": null,
+    "element": null,
+    "original": "# Separated by equal sign (=)",
+    "location": {
       "start": {
         "offset": 0,
         "line": 1,
@@ -15,12 +15,12 @@
         "column": 30
       }
     }
-  ],
-  [
-    "foo1",
-    "bar1",
-    "foo1=bar1",
-    {
+  },
+  {
+    "key": "foo1",
+    "element": "bar1",
+    "original": "foo1=bar1",
+    "location": {
       "start": {
         "offset": 30,
         "line": 2,
@@ -32,12 +32,12 @@
         "column": 10
       }
     }
-  ],
-  [
-    "foo2",
-    "bar2",
-    "foo2 =bar2",
-    {
+  },
+  {
+    "key": "foo2",
+    "element": "bar2",
+    "original": "foo2 =bar2",
+    "location": {
       "start": {
         "offset": 40,
         "line": 3,
@@ -49,12 +49,12 @@
         "column": 11
       }
     }
-  ],
-  [
-    "foo3",
-    "bar3",
-    "foo3= bar3",
-    {
+  },
+  {
+    "key": "foo3",
+    "element": "bar3",
+    "original": "foo3= bar3",
+    "location": {
       "start": {
         "offset": 51,
         "line": 4,
@@ -66,12 +66,12 @@
         "column": 11
       }
     }
-  ],
-  [
-    "foo4",
-    "bar4",
-    "foo4 = bar4",
-    {
+  },
+  {
+    "key": "foo4",
+    "element": "bar4",
+    "original": "foo4 = bar4",
+    "location": {
       "start": {
         "offset": 62,
         "line": 5,
@@ -83,12 +83,12 @@
         "column": 12
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 74,
         "line": 6,
@@ -100,12 +100,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Separated by colon (:)",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Separated by colon (:)",
+    "location": {
       "start": {
         "offset": 75,
         "line": 7,
@@ -117,12 +117,12 @@
         "column": 25
       }
     }
-  ],
-  [
-    "foo5",
-    "bar5",
-    "foo5:bar5",
-    {
+  },
+  {
+    "key": "foo5",
+    "element": "bar5",
+    "original": "foo5:bar5",
+    "location": {
       "start": {
         "offset": 100,
         "line": 8,
@@ -134,12 +134,12 @@
         "column": 10
       }
     }
-  ],
-  [
-    "foo6",
-    "bar6",
-    "foo6 :bar6",
-    {
+  },
+  {
+    "key": "foo6",
+    "element": "bar6",
+    "original": "foo6 :bar6",
+    "location": {
       "start": {
         "offset": 110,
         "line": 9,
@@ -151,12 +151,12 @@
         "column": 11
       }
     }
-  ],
-  [
-    "foo7",
-    "bar7",
-    "foo7: bar7",
-    {
+  },
+  {
+    "key": "foo7",
+    "element": "bar7",
+    "original": "foo7: bar7",
+    "location": {
       "start": {
         "offset": 121,
         "line": 10,
@@ -168,12 +168,12 @@
         "column": 11
       }
     }
-  ],
-  [
-    "foo8",
-    "bar8",
-    "foo8 : bar8",
-    {
+  },
+  {
+    "key": "foo8",
+    "element": "bar8",
+    "original": "foo8 : bar8",
+    "location": {
       "start": {
         "offset": 132,
         "line": 11,
@@ -185,12 +185,12 @@
         "column": 12
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 144,
         "line": 12,
@@ -202,12 +202,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Separated by white spaces ([ \\t\\f])",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Separated by white spaces ([ \\t\\f])",
+    "location": {
       "start": {
         "offset": 145,
         "line": 13,
@@ -219,12 +219,12 @@
         "column": 38
       }
     }
-  ],
-  [
-    "foo9",
-    "bar9",
-    "foo9 bar9",
-    {
+  },
+  {
+    "key": "foo9",
+    "element": "bar9",
+    "original": "foo9 bar9",
+    "location": {
       "start": {
         "offset": 183,
         "line": 14,
@@ -236,12 +236,12 @@
         "column": 10
       }
     }
-  ],
-  [
-    "foo10",
-    "bar10",
-    "foo10\tbar10",
-    {
+  },
+  {
+    "key": "foo10",
+    "element": "bar10",
+    "original": "foo10\tbar10",
+    "location": {
       "start": {
         "offset": 193,
         "line": 15,
@@ -253,12 +253,12 @@
         "column": 12
       }
     }
-  ],
-  [
-    "foo11",
-    "bar11",
-    "foo11\fbar11",
-    {
+  },
+  {
+    "key": "foo11",
+    "element": "bar11",
+    "original": "foo11\fbar11",
+    "location": {
       "start": {
         "offset": 205,
         "line": 16,
@@ -270,12 +270,12 @@
         "column": 12
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 217,
         "line": 17,
@@ -287,12 +287,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Separated by new lines ([\\r\\n]) (empty value)",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Separated by new lines ([\\r\\n]) (empty value)",
+    "location": {
       "start": {
         "offset": 218,
         "line": 18,
@@ -304,12 +304,12 @@
         "column": 48
       }
     }
-  ],
-  [
-    "foo12",
-    "",
-    "foo12",
-    {
+  },
+  {
+    "key": "foo12",
+    "element": "",
+    "original": "foo12",
+    "location": {
       "start": {
         "offset": 266,
         "line": 19,
@@ -321,12 +321,12 @@
         "column": 6
       }
     }
-  ],
-  [
-    "foo13",
-    "",
-    "foo13",
-    {
+  },
+  {
+    "key": "foo13",
+    "element": "",
+    "original": "foo13",
+    "location": {
       "start": {
         "offset": 272,
         "line": 20,
@@ -338,12 +338,12 @@
         "column": 6
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 278,
         "line": 21,
@@ -355,12 +355,12 @@
         "column": 1
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Separated by eof (empty value)",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Separated by eof (empty value)",
+    "location": {
       "start": {
         "offset": 279,
         "line": 22,
@@ -372,12 +372,12 @@
         "column": 33
       }
     }
-  ],
-  [
-    "foo14",
-    "",
-    "foo14",
-    {
+  },
+  {
+    "key": "foo14",
+    "element": "",
+    "original": "foo14",
+    "location": {
       "start": {
         "offset": 312,
         "line": 23,
@@ -389,5 +389,5 @@
         "column": 6
       }
     }
-  ]
+  }
 ]

@@ -1,9 +1,9 @@
 [
-  [
-    null,
-    null,
-    "# You are reading the \".properties\" entry.",
-    {
+  {
+    "key": null,
+    "element": null,
+    "original": "# You are reading the \".properties\" entry.",
+    "location": {
       "start": {
         "offset": 0,
         "line": 1,
@@ -15,12 +15,12 @@
         "column": 43
       }
     }
-  ],
-  [
-    null,
-    null,
-    "! The exclamation mark can also mark text as comments.",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "! The exclamation mark can also mark text as comments.",
+    "location": {
       "start": {
         "offset": 43,
         "line": 2,
@@ -32,12 +32,12 @@
         "column": 55
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# The key characters =, and : should be written with",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# The key characters =, and : should be written with",
+    "location": {
       "start": {
         "offset": 98,
         "line": 3,
@@ -49,12 +49,12 @@
         "column": 53
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# a preceding backslash to ensure that they are properly loaded.",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# a preceding backslash to ensure that they are properly loaded.",
+    "location": {
       "start": {
         "offset": 151,
         "line": 4,
@@ -66,12 +66,12 @@
         "column": 65
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# However, there is no need to precede the value characters =, and : by a backslash.",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# However, there is no need to precede the value characters =, and : by a backslash.",
+    "location": {
       "start": {
         "offset": 216,
         "line": 5,
@@ -83,12 +83,12 @@
         "column": 85
       }
     }
-  ],
-  [
-    "website",
-    "https://en.wikipedia.org/",
-    "website = https://en.wikipedia.org/",
-    {
+  },
+  {
+    "key": "website",
+    "element": "https://en.wikipedia.org/",
+    "original": "website = https://en.wikipedia.org/",
+    "location": {
       "start": {
         "offset": 301,
         "line": 6,
@@ -100,12 +100,12 @@
         "column": 36
       }
     }
-  ],
-  [
-    "language",
-    "English",
-    "language = English",
-    {
+  },
+  {
+    "key": "language",
+    "element": "English",
+    "original": "language = English",
+    "location": {
       "start": {
         "offset": 337,
         "line": 7,
@@ -117,12 +117,12 @@
         "column": 19
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# The backslash below tells the application to continue reading",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# The backslash below tells the application to continue reading",
+    "location": {
       "start": {
         "offset": 356,
         "line": 8,
@@ -134,12 +134,12 @@
         "column": 64
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# the value onto the next line.",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# the value onto the next line.",
+    "location": {
       "start": {
         "offset": 420,
         "line": 9,
@@ -151,12 +151,12 @@
         "column": 32
       }
     }
-  ],
-  [
-    "message",
-    "Welcome to Wikipedia!",
-    "message = Welcome to \\\n          Wikipedia!",
-    {
+  },
+  {
+    "key": "message",
+    "element": "Welcome to Wikipedia!",
+    "original": "message = Welcome to \\\n          Wikipedia!",
+    "location": {
       "start": {
         "offset": 452,
         "line": 10,
@@ -168,12 +168,12 @@
         "column": 21
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Add spaces to the key",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Add spaces to the key",
+    "location": {
       "start": {
         "offset": 496,
         "line": 12,
@@ -185,12 +185,12 @@
         "column": 24
       }
     }
-  ],
-  [
-    "key\\ with\\ spaces",
-    "This is the value that could be looked up with the key \"key with spaces\".",
-    "key\\ with\\ spaces = This is the value that could be looked up with the key \"key with spaces\".",
-    {
+  },
+  {
+    "key": "key\\ with\\ spaces",
+    "element": "This is the value that could be looked up with the key \"key with spaces\".",
+    "original": "key\\ with\\ spaces = This is the value that could be looked up with the key \"key with spaces\".",
+    "location": {
       "start": {
         "offset": 520,
         "line": 13,
@@ -202,12 +202,12 @@
         "column": 94
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# Unicode",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# Unicode",
+    "location": {
       "start": {
         "offset": 614,
         "line": 14,
@@ -219,12 +219,12 @@
         "column": 10
       }
     }
-  ],
-  [
-    "tab",
-    "\\u0009",
-    "tab : \\u0009",
-    {
+  },
+  {
+    "key": "tab",
+    "element": "\\u0009",
+    "original": "tab : \\u0009",
+    "location": {
       "start": {
         "offset": 624,
         "line": 15,
@@ -236,12 +236,12 @@
         "column": 13
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# If you want your property to include a backslash, it should be escaped by another backslash",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# If you want your property to include a backslash, it should be escaped by another backslash",
+    "location": {
       "start": {
         "offset": 637,
         "line": 16,
@@ -253,12 +253,12 @@
         "column": 94
       }
     }
-  ],
-  [
-    "path",
-    "c:\\\\wiki\\\\templates",
-    "path=c:\\\\wiki\\\\templates",
-    {
+  },
+  {
+    "key": "path",
+    "element": "c:\\\\wiki\\\\templates",
+    "original": "path=c:\\\\wiki\\\\templates",
+    "location": {
       "start": {
         "offset": 731,
         "line": 17,
@@ -270,12 +270,12 @@
         "column": 25
       }
     }
-  ],
-  [
-    null,
-    null,
-    "# However, some editors will handle this automatically",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "# However, some editors will handle this automatically",
+    "location": {
       "start": {
         "offset": 756,
         "line": 18,
@@ -287,12 +287,12 @@
         "column": 55
       }
     }
-  ],
-  [
-    null,
-    null,
-    "",
-    {
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "location": {
       "start": {
         "offset": 811,
         "line": 19,
@@ -304,5 +304,5 @@
         "column": 1
       }
     }
-  ]
+  }
 ]
