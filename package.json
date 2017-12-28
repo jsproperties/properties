@@ -15,9 +15,16 @@
   "scripts": {
     "test": "tap test/js/parse.js",
     "prepare": "yon run pegjs && yon run babel && yon run webpack",
+    "watch": "yon run pegjs:watch & yon run babel:watch & yon run webpack:watch",
     "pegjs": "pegjs -o src/properties.pegjs.js src/properties.pegjs",
+    "pegjs:watch": "npm-watch pegjs",
     "babel": "babel -d lib src",
-    "webpack": "webpack --config webpack.dev.js && webpack --config webpack.prod.js"
+    "babel:watch": "babel -w -d lib src",
+    "webpack": "webpack --config webpack.dev.js && webpack --config webpack.prod.js",
+    "webpack:watch": "webpack -w --config webpack.dev.js"
+  },
+  "watch": {
+    "pegjs": "src/properties.pegjs"
   },
   "dependencies": {},
   "devDependencies": {
@@ -27,6 +34,7 @@
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "lodash": "^4.17.4",
+    "npm-watch": "^0.3.0",
     "pegjs": "^0.10.0",
     "pegjs-loader": "^0.5.4",
     "tap": "^11.0.0",

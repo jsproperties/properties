@@ -52,6 +52,15 @@ indent_size = 4
 trim_trailing_whitespace = false
 
 
+# YAML
+[*.{yml,yaml}]
+# Tab characters must not be used in indentation.
+indent_style = space
+# Code examples in YAML specifications use 2-space indentation.
+# Other numbers are also fine.
+indent_size = 2
+
+
 # Test
 [test/data/**.properties]
 charset = unset
