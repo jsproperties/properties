@@ -31,6 +31,11 @@ export function arrayToProperties(array) {
     // Blank and comment lines are ignored
     if (key === null) continue;
 
+    // Parsed array adheres to what user authored,
+    // while in properties, we need to unescape backslashes.
+    key = unescapeBackslashes(key);
+    element = unescapeBackslashes(element);
+
     // Assign to properties by key, later entries overwrite previous ones
     properties[key] = element;
   }
@@ -38,6 +43,10 @@ export function arrayToProperties(array) {
   return properties;
 }
 PropertiesParser.arrayToProperties = arrayToProperties;
+
+function unescapeBackslashes(input) {
+  return input.replace(/\\\\/g, '\\');
+}
 
 // Export everything this module exports as a default export
 export default PropertiesParser;
