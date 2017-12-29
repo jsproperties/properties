@@ -6,9 +6,11 @@ JavaScript .properties parser
 
 This is a parser written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
 
-The parser returns raw parsing result as an array of tuple in the form `[key, element, original, location][]`.
+The parser can return parsed properties object ([`parseToProperites`](#parseToProperties)) or return raw parsing result ([`parseToArray`](#parseToArray)) as an array of objects which have `key`, `element`, `original` and [`location`](#Location) as keys.
 
-* Each *logical line* of input .propertis file is parsed into a tuple, with the **original** logical line and/or line **location** info optionally kept;
+As to the raw parsing result:
+
+* Each *logical line* of input .properties file is parsed into a object, with the **original** logical line and/or line **location** info optionally kept;
 * Properties with duplicate keys are kept in the raw output so that one can build high-level applications reporting them;
 * Blank and comment lines can be kept as well so that there is no info loss of the original file after parsing. This could be useful for something like .properties IDE.
 
@@ -99,7 +101,7 @@ Output with all options on:
 ]
 ```
 
-There is also a method `parseToProperties(input)` which generates ouput like:
+There is also a method `parseToProperties(input)` which generates output like:
 
 ```
 {
@@ -111,14 +113,17 @@ There is also a method `parseToProperties(input)` which generates ouput like:
 
 ## API
 
+<a id="parseToProperties"></a>
 ### Method: parseToProperties(string)
 
 **Returns:** `object`
 
+<a id="parseToArray"></a>
 ### Method: parseToArray(string [, options ])
 
 **Returns:** `Array<PropertyEntry>`
 
+<a id="PropertyEntry"></a>
 ### Object: PropertyEntry
 
 Property   | Type         | Description
@@ -134,6 +139,7 @@ Note: `original` is always a `string`, in the case of blank line, it's an empty 
 
 [\*] A *logical line* may spread across several *natural lines* if line continuation is involved.
 
+<a id="options"></a>
 ### Object: options
 
 Option     | Type    | Description
@@ -144,10 +150,12 @@ Option     | Type    | Description
 
 All options default to `false`.
 
+<a id="Location"></a>
 ### Object: Location
 
 `{ start: Position, end: Position }`
 
+<a id="Position"></a>
 ### Object: Position
 
 `{ offset: number, line: number, column: number }`

@@ -1,6 +1,7 @@
 // Properties Parser
 // =================
-// Returns Array of [key, element, [original], [location]] pairs.
+// Returns Array of { key: string | null, element: string | null,
+// [original: string], [location: Location] } objects.
 
 // Properties Syntax:
 // https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-
