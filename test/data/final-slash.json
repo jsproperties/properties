@@ -3,6 +3,7 @@
     "key": "foo",
     "element": "a\\\\b",
     "original": "foo = a\\\\\\\n  b",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": null,
     "element": null,
     "original": "",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 15,
@@ -37,6 +39,7 @@
     "key": "bar",
     "element": "z",
     "original": "bar = z\\\n",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 16,
@@ -54,6 +57,7 @@
     "key": "baz",
     "element": "shh",
     "original": "baz = shh\\",
+    "eol": null,
     "location": {
       "start": {
         "offset": 26,

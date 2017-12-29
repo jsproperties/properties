@@ -32,6 +32,7 @@ filenames.forEach(filename => {
     let options = {
       all: true,
       original: true,
+      eol: true,
       location: true,
     };
 
@@ -76,6 +77,9 @@ filenames.forEach(filename => {
       }
       if (!options.original) {
        expectedEntries.forEach(e => delete e.original);
+      }
+      if (!options.eol) {
+        expectedEntries.forEach(e => delete e.eol);
       }
       if (!options.location) {
         expectedEntries.forEach(e => delete e.location);

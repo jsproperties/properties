@@ -45,6 +45,7 @@ const input = fs.readFileSync('example.properties', 'utf8');
 const options = {   // options is optional
   all: true,        // Include empty and blank lines
   original: true,   // Include original logical line in output
+  eol: true,        // Include eol (end of line) in output
   location: true,   // Include location info in output
 };
 let output = PropertiesParser.parseToArray(input, options);
@@ -75,25 +76,29 @@ Output with all options on:
 ```json
 [
   {
-    "key": null, "element": null, "original": "# Comment here",
+    "key": null, "element": null,
+    "original": "# Comment here", "eol": "\n",
     "location": {
       "start": { "offset":  0, "line": 1, "column":  1 },
       "end":   { "offset": 14, "line": 1, "column": 15 } }
   },
   {
-    "key": "hello", "element": "world", "original": "hello = world",
+    "key": "hello", "element": "world",
+    "original": "hello = world", "eol": "\n",
     "location": {
       "start": { "offset": 15, "line": 2, "column":  1 },
       "end":   { "offset": 28, "line": 2, "column": 14 } }
   },
   {
-    "key": null, "element": null, "original": "",
+    "key": null, "element": null,
+    "original": "", "eol": "\n",
     "location": {
       "start": { "offset": 29, "line": 3, "column":  1 },
       "end":   { "offset": 29, "line": 3, "column":  1 } }
   },
   {
-    "key": "foo", "element": "bar", "original": "foo : bar",
+    "key": "foo", "element": "bar",
+    "original": "foo : bar", "eol": "\n",
     "location": {
       "start": { "offset": 30, "line": 4, "column":  1 },
       "end":   { "offset": 39, "line": 4, "column": 10 } }
@@ -131,11 +136,14 @@ Property   | Type         | Description
 `key`      | string\|null | Property Key
 `element`  | string\|null | Property Element (value)
 `original` | string       | (optional) The original *logical line* [\*] containing the property
+`eol`      | string\|null | (optional) The eol (end of line) of the *logical line* [\*]
 `location` | Location     | (optional) The start and end position of the *logical line* [\*]
 
 Note: `key` and `element` will be `null` for blank and comment lines.
 
 Note: `original` is always a `string`, in the case of blank line, it's an empty string.
+
+Note: `eol` will be `null` if this is the last line and contains no final eol.
 
 [\*] A *logical line* may spread across several *natural lines* if line continuation is involved.
 
@@ -146,6 +154,7 @@ Option     | Type    | Description
 ---------- | ------- | ----
 `all`      | boolean | Include empty and blank lines
 `original` | boolean | Include original logical line in output
+`eol`      | boolean | Include eol (end of line) in output
 `location` | boolean | Include location info in output
 
 All options default to `false`.

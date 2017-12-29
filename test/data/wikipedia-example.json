@@ -3,6 +3,7 @@
     "key": null,
     "element": null,
     "original": "# You are reading the \".properties\" entry.",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": null,
     "element": null,
     "original": "! The exclamation mark can also mark text as comments.",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 43,
@@ -37,6 +39,7 @@
     "key": null,
     "element": null,
     "original": "# The key characters =, and : should be written with",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 98,
@@ -54,6 +57,7 @@
     "key": null,
     "element": null,
     "original": "# a preceding backslash to ensure that they are properly loaded.",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 151,
@@ -71,6 +75,7 @@
     "key": null,
     "element": null,
     "original": "# However, there is no need to precede the value characters =, and : by a backslash.",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 216,
@@ -88,6 +93,7 @@
     "key": "website",
     "element": "https://en.wikipedia.org/",
     "original": "website = https://en.wikipedia.org/",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 301,
@@ -105,6 +111,7 @@
     "key": "language",
     "element": "English",
     "original": "language = English",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 337,
@@ -122,6 +129,7 @@
     "key": null,
     "element": null,
     "original": "# The backslash below tells the application to continue reading",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 356,
@@ -139,6 +147,7 @@
     "key": null,
     "element": null,
     "original": "# the value onto the next line.",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 420,
@@ -156,6 +165,7 @@
     "key": "message",
     "element": "Welcome to Wikipedia!",
     "original": "message = Welcome to \\\n          Wikipedia!",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 452,
@@ -173,6 +183,7 @@
     "key": null,
     "element": null,
     "original": "# Add spaces to the key",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 496,
@@ -190,6 +201,7 @@
     "key": "key\\ with\\ spaces",
     "element": "This is the value that could be looked up with the key \"key with spaces\".",
     "original": "key\\ with\\ spaces = This is the value that could be looked up with the key \"key with spaces\".",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 520,
@@ -207,6 +219,7 @@
     "key": null,
     "element": null,
     "original": "# Unicode",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 614,
@@ -224,6 +237,7 @@
     "key": "tab",
     "element": "\\u0009",
     "original": "tab : \\u0009",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 624,
@@ -241,6 +255,7 @@
     "key": null,
     "element": null,
     "original": "# If you want your property to include a backslash, it should be escaped by another backslash",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 637,
@@ -258,6 +273,7 @@
     "key": "path",
     "element": "c:\\\\wiki\\\\templates",
     "original": "path=c:\\\\wiki\\\\templates",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 731,
@@ -275,6 +291,7 @@
     "key": null,
     "element": null,
     "original": "# However, some editors will handle this automatically",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 756,

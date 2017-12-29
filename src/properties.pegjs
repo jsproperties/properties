@@ -1,7 +1,7 @@
 // Properties Parser
 // =================
 // Returns Array of { key: string | null, element: string | null,
-// [original: string], [location: Location] } objects.
+// [original: string], [eol: string | null] [location: Location] } objects.
 
 // Properties Syntax:
 // https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-
@@ -11,15 +11,15 @@
   //options.all = true;
   // Whether to include the original logical line
   //options.original = true;
+  // Whether to include eol (end of line)
+  //options.eol = true;
   // Whether to include location info
   //options.location = true;
 }
 
 // File
 PropertiesFile // property list
-  = lines:(Line NL)* trailing:TrailingLine? {
-      // We only care the Line part; drop NL part
-      lines = lines.map(l=>l[0]);
+  = lines:FullLine* trailing:TrailingLine? {
       // Add the trailing line, i.e. line without eol
       if (trailing) lines.push(trailing);
       // Filter out blank and comment lines
@@ -27,7 +27,14 @@ PropertiesFile // property list
     }
 
 // Line
-Line // logical line
+FullLine // logical line with eol
+  = line:Line eol:NL {
+      if (!line) return;
+      if (options.eol) line.eol = eol;
+      return line;
+    }
+
+Line // logical line without eol
   = _ CONT* line:(Comment / PropertyEntry) {
       if (!line) {
         if (options.all) {
@@ -38,6 +45,7 @@ Line // logical line
       }
 
       if (options.original) line.original = text();
+      if (options.eol) line.eol = null;
       if (options.location) line.location = location();
 
       return line;

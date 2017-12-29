@@ -3,6 +3,7 @@
     "key": "foo",
     "element": "A.B.C",
     "original": "foo = A.B.C",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": "foo.bar",
     "element": "abc",
     "original": "foo.bar : abc",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 12,
@@ -37,6 +39,7 @@
     "key": "foo.baz",
     "element": "def",
     "original": "foo.baz   def",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 26,
@@ -54,6 +57,7 @@
     "key": "qux.quux",
     "element": "quuz",
     "original": "qux.quux = quuz",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 40,

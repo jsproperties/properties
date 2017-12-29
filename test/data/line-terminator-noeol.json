@@ -3,6 +3,7 @@
     "key": null,
     "element": null,
     "original": "# LF as the line terminator; no final eol",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": "foo",
     "element": "bar",
     "original": "foo = bar",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 42,
@@ -37,6 +39,7 @@
     "key": "baz",
     "element": "qux",
     "original": "baz = qux",
+    "eol": null,
     "location": {
       "start": {
         "offset": 52,

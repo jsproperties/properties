@@ -3,6 +3,7 @@
     "key": null,
     "element": null,
     "original": "# Multiline element",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": "foo",
     "element": "AaBbCc",
     "original": "foo = Aa\\\n  Bb\\\nCc",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 20,
@@ -37,6 +39,7 @@
     "key": null,
     "element": null,
     "original": "",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 39,
@@ -54,6 +57,7 @@
     "key": null,
     "element": null,
     "original": "# Multiline key",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 40,
@@ -71,6 +75,7 @@
     "key": "bar001122",
     "element": "baz",
     "original": "bar\\\n  00\\\n11\\\n  22 : baz",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 56,
@@ -88,6 +93,7 @@
     "key": null,
     "element": null,
     "original": "",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 82,
@@ -105,6 +111,7 @@
     "key": null,
     "element": null,
     "original": "# Multiline separator",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 83,
@@ -122,6 +129,7 @@
     "key": "qux",
     "element": "quux",
     "original": "qux \\\n = \\\n  quux",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 105,
@@ -139,6 +147,7 @@
     "key": null,
     "element": null,
     "original": "",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 123,
@@ -156,6 +165,7 @@
     "key": null,
     "element": null,
     "original": "# Multiline key/element/separator",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 124,
@@ -173,6 +183,7 @@
     "key": "multilinename",
     "element": "multiline value",
     "original": "multiline\\\n name \\\nmultiline \\\n value",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 158,

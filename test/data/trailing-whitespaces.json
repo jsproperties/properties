@@ -3,6 +3,7 @@
     "key": "foo",
     "element": "a b\tc   ",
     "original": "foo \t=\fa b\tc   ",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": "bar",
     "element": "d\te\tf\t  \t",
     "original": "bar : d\te\tf\t  \t",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 16,
@@ -37,6 +39,7 @@
     "key": "baz",
     "element": "g\fh\fi\f\t\f \f",
     "original": "baz\fg\fh\fi\f\t\f \f",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 32,

@@ -3,6 +3,7 @@
     "key": null,
     "element": null,
     "original": "# Duplicate keys",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": "foo",
     "element": "bar",
     "original": "foo = bar",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 17,
@@ -37,6 +39,7 @@
     "key": "foo",
     "element": "baz",
     "original": "foo = baz",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 27,
@@ -54,6 +57,7 @@
     "key": null,
     "element": null,
     "original": "",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 37,
@@ -71,6 +75,7 @@
     "key": null,
     "element": null,
     "original": "# Duplicate elements",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 38,
@@ -88,6 +93,7 @@
     "key": "qux",
     "element": "quuz",
     "original": "qux = quuz",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 59,
@@ -105,6 +111,7 @@
     "key": "quux",
     "element": "quuz",
     "original": "quux = quuz",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 70,
@@ -122,6 +129,7 @@
     "key": null,
     "element": null,
     "original": "",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 82,
@@ -139,6 +147,7 @@
     "key": null,
     "element": null,
     "original": "# Duplicate key and element pairs",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 83,
@@ -156,6 +165,7 @@
     "key": "dup",
     "element": "duplicate",
     "original": "dup = duplicate",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 117,
@@ -173,6 +183,7 @@
     "key": "dup",
     "element": "duplicate",
     "original": "dup : duplicate",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 133,

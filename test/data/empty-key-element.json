@@ -3,6 +3,7 @@
     "key": null,
     "element": null,
     "original": "# Empty Element",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": "foo",
     "element": "",
     "original": "foo",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 16,
@@ -37,6 +39,7 @@
     "key": null,
     "element": null,
     "original": "",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 20,
@@ -54,6 +57,7 @@
     "key": null,
     "element": null,
     "original": "# Empty Key",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 21,
@@ -71,6 +75,7 @@
     "key": "",
     "element": "bar",
     "original": "=bar",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 33,
@@ -88,6 +93,7 @@
     "key": null,
     "element": null,
     "original": "",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 38,
@@ -105,6 +111,7 @@
     "key": null,
     "element": null,
     "original": "# Empty Key and Element",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 39,
@@ -122,6 +129,7 @@
     "key": "",
     "element": "",
     "original": ":",
+    "eol": "\n",
     "location": {
       "start": {
         "offset": 63,

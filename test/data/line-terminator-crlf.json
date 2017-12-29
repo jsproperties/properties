@@ -3,6 +3,7 @@
     "key": null,
     "element": null,
     "original": "# CRLF as the line terminator",
+    "eol": "\r\n",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": "foo",
     "element": "bar",
     "original": "foo = bar",
+    "eol": "\r\n",
     "location": {
       "start": {
         "offset": 31,
@@ -37,6 +39,7 @@
     "key": "baz",
     "element": "qux",
     "original": "baz = qux",
+    "eol": "\r\n",
     "location": {
       "start": {
         "offset": 42,

@@ -3,6 +3,7 @@
     "key": null,
     "element": null,
     "original": "# CR as the line terminator",
+    "eol": "\r",
     "location": {
       "start": {
         "offset": 0,
@@ -20,6 +21,7 @@
     "key": "foo",
     "element": "bar",
     "original": "foo = bar",
+    "eol": "\r",
     "location": {
       "start": {
         "offset": 28,
@@ -37,6 +39,7 @@
     "key": "baz",
     "element": "qux",
     "original": "baz = qux",
+    "eol": "\r",
     "location": {
       "start": {
         "offset": 38,
