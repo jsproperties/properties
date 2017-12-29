@@ -83,22 +83,5 @@
         "column": 1
       }
     }
-  },
-  {
-    "key": null,
-    "element": null,
-    "original": "",
-    "location": {
-      "start": {
-        "offset": 76,
-        "line": 4,
-        "column": 2
-      },
-      "end": {
-        "offset": 76,
-        "line": 4,
-        "column": 2
-      }
-    }
   }
 ]

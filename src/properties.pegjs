@@ -16,7 +16,7 @@
 
 // File
 PropertiesFile // property list
-  = lines:(Line NL)* trailing:Line? {
+  = lines:(Line NL)* trailing:TrailingLine? {
       // We only care the Line part; drop NL part
       lines = lines.map(l=>l[0]);
       // Add the trailing line, i.e. line without eol
@@ -42,6 +42,14 @@ Line // logical line
       return line;
     }
 
+TrailingLine // The last logical line without final eol
+  = line:Line {
+      // If the offset of start and end match, there is actually no trailing
+      // line; TrailingLine is matched in this case because a line itself
+      // (not counting eol) may contain no characters.
+      return location().start.offset === location().end.offset ?
+          undefined : line;
+    }
 
 // Comment
 Comment

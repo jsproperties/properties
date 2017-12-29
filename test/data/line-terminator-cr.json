@@ -49,22 +49,5 @@
         "column": 48
       }
     }
-  },
-  {
-    "key": null,
-    "element": null,
-    "original": "",
-    "location": {
-      "start": {
-        "offset": 48,
-        "line": 1,
-        "column": 49
-      },
-      "end": {
-        "offset": 48,
-        "line": 1,
-        "column": 49
-      }
-    }
   }
 ]
