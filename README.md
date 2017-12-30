@@ -130,6 +130,8 @@ Option      | Type    | Description
 
 All options default to `false`.
 
+`true` and `{ '': true }` can be used as a shortcut to turn on all options. `{ '': true, namespace: false }` can be used to turn on all options except for those listed explicitly.
+
 **Returns:** `object`
 
 <a id="parseToArray"></a>
@@ -146,6 +148,8 @@ Option     | Type    | Description
 `location` | boolean | Include location info in output
 
 All options default to `false`.
+
+`true` and `{ '': true }` can be used as a shortcut to turn on all options. `{ '': true, location: false }` can be used to turn on all options except for those listed explicitly.
 
 **Returns:** `Array<PropertyEntry>`
 

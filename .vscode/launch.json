@@ -33,6 +33,12 @@
       "args": [
         "--gen"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test options.js",
+      "program": "${workspaceFolder}/test/js/options.js"
     }
   ]
 }

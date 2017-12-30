@@ -1,5 +1,5 @@
 const optionNames = ['all', 'original', 'eol', 'location'];
-let optionsToTest = [{}];
+let optionsToTest = [];
 
 for (let i = 0; i < Math.pow(optionNames.length, 2); ++i) {
   optionsToTest.push({

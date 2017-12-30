@@ -5,11 +5,26 @@ import * as PropertiesParser from './properties.pegjs';
 export * from './properties.pegjs';
 
 
+const parseToArrayOptions = [
+  'all',        // Include empty and blank lines
+  'original',   // Include original logical line in output
+  'eol',        // Include eol (end of line) in output
+  'location',   // Include location info in output
+];
+
+const parseToPropertiesOptions = [
+  'namespace',  // Parse dot separated keys as namespaced
+];
+
+
 /**
  * Parse .properties file content to an array of object containing key, element,
  * and optionally original line and location.
  */
-export const parseToArray = PropertiesParser.parse;
+export function parseToArray(input, options) {
+  options = parseOptions(options, parseToArrayOptions);
+  return PropertiesParser.parse(input, options);
+}
 PropertiesParser.parseToArray = parseToArray;
 
 /**
@@ -23,7 +38,7 @@ export function parseToProperties(input, options) {
 PropertiesParser.parseToProperties = parseToProperties;
 
 export function arrayToProperties(array, options) {
-  options = options || {};
+  options = parseOptions(options, parseToPropertiesOptions);
   let properties = {};
 
   for (let entry of array) {
@@ -72,6 +87,32 @@ export function arrayToProperties(array, options) {
 }
 PropertiesParser.arrayToProperties = arrayToProperties;
 
+
+function parseOptions(options, availableOptionNames) {
+  // Fix `null`, `false` as the options
+  options = options || {};
+
+  // `true` is a shortcut to turn all options on
+  if (options === true) {
+    options = {};
+    for (let option of availableOptionNames) {
+      options[option] = true;
+    }
+    return options;
+  }
+
+  // { '': true } is also a shorcut to turn all options on, while allow
+  // individual options to be turned off by setting them explicitly.
+  if (typeof options[''] === 'boolean') {
+    for (let option of availableOptionNames) {
+      if (!(option in options)) {
+        options[option] = options[''];
+      }
+    }
+  }
+
+  return options;
+}
 
 function unescapeBackslashes(input) {
   return input.replace(/\\\\/g, '\\');
