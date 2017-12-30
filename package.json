@@ -19,8 +19,8 @@
     "watch": "yon run pegjs:watch & yon run babel:watch & yon run webpack:watch",
     "pegjs": "pegjs -o src/properties.pegjs.js src/properties.pegjs",
     "pegjs:watch": "npm-watch pegjs",
-    "babel": "babel -d lib src",
-    "babel:watch": "babel -w -d lib src",
+    "babel": "babel -s -d lib src",
+    "babel:watch": "babel -w -s -d lib src",
     "webpack": "webpack --config webpack.dev.js && webpack --config webpack.prod.js",
     "webpack:watch": "webpack -w --config webpack.dev.js"
   },
