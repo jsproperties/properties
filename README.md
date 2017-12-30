@@ -219,3 +219,11 @@ yarn test
 # or
 npm test
 ```
+
+### Update expected test output
+
+```sh
+yarn run test:snapshot
+# or
+npm run test:snapshot
+```
