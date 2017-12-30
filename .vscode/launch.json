@@ -8,13 +8,13 @@
       "type": "node",
       "request": "launch",
       "name": "Test parse.js",
-      "program": "${workspaceFolder}/test/js/parse.js"
+      "program": "${workspaceFolder}/test/js/parse.test.js"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Snapshot parse.js",
-      "program": "${workspaceFolder}/test/js/parse.js",
+      "program": "${workspaceFolder}/test/js/parse.test.js",
       "args": [
         "--gen"
       ]
@@ -23,13 +23,13 @@
       "type": "node",
       "request": "launch",
       "name": "Test namespace.js",
-      "program": "${workspaceFolder}/test/js/namespace.js"
+      "program": "${workspaceFolder}/test/js/namespace.test.js"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Snapshot namespace.js",
-      "program": "${workspaceFolder}/test/js/namespace.js",
+      "program": "${workspaceFolder}/test/js/namespace.test.js",
       "args": [
         "--gen"
       ]
@@ -38,7 +38,7 @@
       "type": "node",
       "request": "launch",
       "name": "Test options.js",
-      "program": "${workspaceFolder}/test/js/options.js"
+      "program": "${workspaceFolder}/test/js/options.test.js"
     }
   ]
 }

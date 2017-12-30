@@ -13,7 +13,7 @@
   "author": "pallxk <github@pallxk.com>",
   "main": "lib/index.js",
   "scripts": {
-    "test": "tap test/js/parse.js test/js/namespace.js test/js/options.js",
+    "test": "tap test/js/*.test.js",
     "prepare": "yon run pegjs && yon run babel && yon run webpack",
     "watch": "yon run pegjs:watch & yon run babel:watch & yon run webpack:watch",
     "pegjs": "pegjs -o src/properties.pegjs.js src/properties.pegjs",
