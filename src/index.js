@@ -4,6 +4,7 @@ import * as PropertiesParser from './properties.pegjs';
 // Reexport everything PEG.js generated parser exports
 export * from './properties.pegjs';
 
+
 /**
  * Parse .properties file content to an array of object containing key, element,
  * and optionally original line and location.
@@ -16,12 +17,13 @@ PropertiesParser.parseToArray = parseToArray;
  * the key and property element as the value.
  */
 export function parseToProperties(input, options) {
-  let parsedArray = parseToArray(input, options);
-  return arrayToProperties(parsedArray);
+  let parsedArray = parseToArray(input);
+  return arrayToProperties(parsedArray, options);
 }
 PropertiesParser.parseToProperties = parseToProperties;
 
-export function arrayToProperties(array) {
+export function arrayToProperties(array, options) {
+  options = options || {};
   let properties = {};
 
   for (let entry of array) {
@@ -37,16 +39,48 @@ export function arrayToProperties(array) {
     element = unescapeBackslashes(element);
 
     // Assign to properties by key, later entries overwrite previous ones
-    properties[key] = element;
+    if (options.namespace) {
+      let namespacedKey = parseNamespace(key);
+      let property = properties;
+      namespacedKey.forEach((name, i) => {
+        // This is the last component of the key
+        if (i === namespacedKey.length - 1) {
+          property[name] = element;
+          return;
+        }
+
+        // This is part of the namespace
+        if (name in property) {
+          // Namespace itself and keys under it may all have values
+          // e.g. "foo = bar" "foo.qux = quux"
+          if (typeof property[name] === 'string') {
+            // Make value of namespace a value of an empty key under the
+            // namespace
+            property[name] = { '': property[name] };
+          }
+        } else {
+          property[name] = {};
+        }
+        property = property[name];
+      });
+    } else {
+      properties[key] = element;
+    }
   }
 
   return properties;
 }
 PropertiesParser.arrayToProperties = arrayToProperties;
 
+
 function unescapeBackslashes(input) {
   return input.replace(/\\\\/g, '\\');
 }
+
+function parseNamespace(key) {
+  return key.split('.');
+}
+
 
 // Export everything this module exports as a default export
 export default PropertiesParser;

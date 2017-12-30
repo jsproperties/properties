@@ -7,14 +7,29 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Test",
+      "name": "Test parse.js",
       "program": "${workspaceFolder}/test/js/parse.js"
     },
     {
       "type": "node",
       "request": "launch",
-      "name": "Snapshot Test Results",
+      "name": "Snapshot parse.js",
       "program": "${workspaceFolder}/test/js/parse.js",
+      "args": [
+        "--gen"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test namespace.js",
+      "program": "${workspaceFolder}/test/js/namespace.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Snapshot namespace.js",
+      "program": "${workspaceFolder}/test/js/namespace.js",
       "args": [
         "--gen"
       ]

@@ -6,7 +6,7 @@ JavaScript .properties parser
 
 This is a parser written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
 
-The parser can return parsed properties object ([`parseToProperites`](#parseToProperties)) or return raw parsing result ([`parseToArray`](#parseToArray)) as an array of objects which have `key`, `element`, `original` and [`location`](#Location) as keys.
+The parser can return parsed properties object ([`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToArray`](#parseToArray)) as an array of objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
 
 As to the raw parsing result:
 
@@ -119,12 +119,33 @@ There is also a method `parseToProperties(input)` which generates output like:
 ## API
 
 <a id="parseToProperties"></a>
-### Method: parseToProperties(string)
+### Method: parseToProperties(string [, options ])
+
+<a id="parseToProperties-options"></a>
+#### Object: options
+
+Option      | Type    | Description
+----------- | ------- | ----
+`namespace` | boolean | Parse dot separated keys as namespaced
+
+All options default to `false`.
 
 **Returns:** `object`
 
 <a id="parseToArray"></a>
 ### Method: parseToArray(string [, options ])
+
+<a id="parseToArray-options"></a>
+#### Object: options
+
+Option     | Type    | Description
+---------- | ------- | ----
+`all`      | boolean | Include empty and blank lines
+`original` | boolean | Include original logical line in output
+`eol`      | boolean | Include eol (end of line) in output
+`location` | boolean | Include location info in output
+
+All options default to `false`.
 
 **Returns:** `Array<PropertyEntry>`
 
@@ -146,18 +167,6 @@ Note: `original` is always a `string`, in the case of blank line, it's an empty 
 Note: `eol` will be `null` if this is the last line and contains no final eol.
 
 [\*] A *logical line* may spread across several *natural lines* if line continuation is involved.
-
-<a id="options"></a>
-### Object: options
-
-Option     | Type    | Description
----------- | ------- | ----
-`all`      | boolean | Include empty and blank lines
-`original` | boolean | Include original logical line in output
-`eol`      | boolean | Include eol (end of line) in output
-`location` | boolean | Include location info in output
-
-All options default to `false`.
 
 <a id="Location"></a>
 ### Object: Location

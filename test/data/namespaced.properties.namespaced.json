@@ -1,0 +1,10 @@
+{
+  "foo": {
+    "": "A.B.C",
+    "bar": "abc",
+    "baz": "def"
+  },
+  "qux": {
+    "quux": "quuz"
+  }
+}
