@@ -16,9 +16,11 @@ const gen = process.argv[2] === '--gen';
 // Get .properties test files
 let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
 if (!gen) {
-  tap.plan(filenames.length * (
-      optionsToTest.length + // options for parseToArray
-      1));                   // one more for parseToProperties
+  tap.plan(filenames.length *
+      (
+        optionsToTest.length + // options for parseToArray
+        1                      // one more for parseToProperties
+      ));
 }
 
 // Parse, and snapshot or compare
@@ -42,8 +44,8 @@ filenames.forEach(filename => {
 
     // Write output for later tests
     fs.writeFileSync(
-      path.join(dataDir, filename.replace(rproperties, '.json')),
-      actualString);
+        path.join(dataDir, filename.replace(rproperties, '.json')),
+        actualString);
 
     // Generate output via parseToProperties
     actualEntries = PropertiesParser.parseToProperties(input);
@@ -51,18 +53,18 @@ filenames.forEach(filename => {
 
     // Write output for later tests
     fs.writeFileSync(
-      path.join(dataDir, filename + '.json'),
-      actualString);
+        path.join(dataDir, filename + '.json'),
+        actualString);
   } else {
     // Test parseToArray
 
     // Get snapshot output
     let snapshotString = fs.readFileSync(
-      path.join(dataDir, filename.replace(rproperties, '.json')), 'utf8');
+        path.join(dataDir, filename.replace(rproperties, '.json')), 'utf8');
     let snapshotEntries = JSON.parse(snapshotString);
 
     // Test each options used by parseToArray
-    for (options of optionsToTest) {
+    for (let options of optionsToTest) {
       // Generate output
       let actualEntries = PropertiesParser.parseToArray(input, options);
 
@@ -76,7 +78,7 @@ filenames.forEach(filename => {
         });
       }
       if (!options.original) {
-       expectedEntries.forEach(e => delete e.original);
+        expectedEntries.forEach(e => delete e.original);
       }
       if (!options.eol) {
         expectedEntries.forEach(e => delete e.eol);
@@ -97,7 +99,7 @@ filenames.forEach(filename => {
 
     // Get snapshot output
     snapshotString = fs.readFileSync(
-      path.join(dataDir, filename + '.json'), 'utf8');
+        path.join(dataDir, filename + '.json'), 'utf8');
     snapshotEntries = JSON.parse(snapshotString);
 
     // Generate output

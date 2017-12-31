@@ -33,12 +33,12 @@ filenames.forEach(filename => {
 
     // Write output for later tests
     fs.writeFileSync(
-      path.join(dataDir, filename + '.namespaced.json'),
-      actualString);
+        path.join(dataDir, filename + '.namespaced.json'),
+        actualString);
   } else {
     // Get snapshot output
     let snapshotString = fs.readFileSync(
-      path.join(dataDir, filename + '.namespaced.json'), 'utf8');
+        path.join(dataDir, filename + '.namespaced.json'), 'utf8');
     let snapshotEntries = JSON.parse(snapshotString);
 
     // Generate output

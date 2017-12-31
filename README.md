@@ -227,3 +227,11 @@ yarn run test:snapshot
 # or
 npm run test:snapshot
 ```
+
+### Lint
+
+```sh
+yarn run lint
+# or
+npm run lint
+```

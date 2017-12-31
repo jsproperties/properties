@@ -15,7 +15,7 @@ const parseToArrayOptionPairs = [
   [null, {}],
   [false, { '': false }],
   [true, { '': true }],
-  [{}, { '': false}],
+  [{}, { '': false }],
   [{ '': false }, { all: false, original: false, eol: false, location: false }],
   [{ '': true }, { all: true, original: true, eol: true, location: true }],
   [{ '': true, all: false }, { all: false, original: true, eol: true, location: true }],
@@ -27,12 +27,12 @@ const parseToPropertiesOptionPairs = [
   [null, {}],
   [false, { '': false }],
   [true, { '': true }],
-  [{}, { '': false}],
+  [{}, { '': false }],
   [{ '': false }, { namespace: false }],
   [{ '': true }, { namespace: true }],
   [{ '': true, namespace: false }, { namespace: false }],
   [{ '': false, namespace: true }, { namespace: true }],
-]
+];
 
 // Get .properties test files
 let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
@@ -43,7 +43,7 @@ filenames.forEach(filename => {
   let input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
 
   // Test each pair of options for parseToArray
-  for (options of parseToArrayOptionPairs) {
+  for (let options of parseToArrayOptionPairs) {
     let x = PropertiesParser.parseToArray(input, options[0]);
     let y = PropertiesParser.parseToArray(input, options[1]);
 
@@ -56,7 +56,7 @@ filenames.forEach(filename => {
   }
 
   // Test each pair of options for parseToProperties
-  for (options of parseToPropertiesOptionPairs) {
+  for (let options of parseToPropertiesOptionPairs) {
     let x = PropertiesParser.parseToProperties(input, options[0]);
     let y = PropertiesParser.parseToProperties(input, options[1]);
 
