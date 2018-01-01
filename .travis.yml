@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "node"
+  - "lts/*"
+  - "4"
+  - "6"
+  - "8"
+cache: yarn
+script:
+  - npm run lint
+  - npm test
