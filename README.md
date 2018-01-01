@@ -10,7 +10,7 @@ The parser can return parsed properties object ([`parseToProperites`](#parseToPr
 
 As to the raw parsing result:
 
-* Each *logical line* of input .properties file is parsed into a object, with the **original** logical line and/or line **location** info optionally kept;
+* Each *logical line* of input .properties file is parsed into an object, with the **original** logical line, **eol** info, and/or line **location** info optionally kept;
 * Properties with duplicate keys are kept in the raw output so that one can build high-level applications reporting them;
 * Blank and comment lines can be kept as well so that there is no info loss of the original file after parsing. This could be useful for something like .properties IDE.
 
@@ -156,13 +156,13 @@ All options default to `false`.
 <a id="PropertyEntry"></a>
 ### Object: PropertyEntry
 
-Property   | Type         | Description
----------- | ------------ | ----
-`key`      | string\|null | Property Key
-`element`  | string\|null | Property Element (value)
-`original` | string       | (optional) The original *logical line* [\*] containing the property
-`eol`      | string\|null | (optional) The eol (end of line) of the *logical line* [\*]
-`location` | Location     | (optional) The start and end position of the *logical line* [\*]
+Property   | Type           | Description
+---------- | -------------- | ----
+`key`      | string \| null | Property Key
+`element`  | string \| null | Property Element (value)
+`original` | string         | (optional) The original *logical line* [\*] containing the property
+`eol`      | string \| null | (optional) The eol (end of line) of the *logical line* [\*]
+`location` | Location       | (optional) The start and end position of the *logical line* [\*]
 
 Note: `key` and `element` will be `null` for blank and comment lines.
 
