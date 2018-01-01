@@ -20,6 +20,9 @@ const parseToPropertiesOptions = [
 /**
  * Parse .properties file content to an array of object containing key, element,
  * and optionally original line and location.
+ * @param {string} input Properties file content in string.
+ * @param {*} [options] Options for parsing.
+ * @returns {Array} Parsed result in array.
  */
 export function parseToArray(input, options) {
   options = parseOptions(options, parseToArrayOptions);
@@ -30,6 +33,9 @@ PropertiesParser.parseToArray = parseToArray;
 /**
  * Parse .properties file content to a properties object, with property key as
  * the key and property element as the value.
+ * @param {string} input Properties file content in string.
+ * @param {*} [options] Options for parsing.
+ * @returns {object} Parsed result in properties object.
  */
 export function parseToProperties(input, options) {
   let parsedArray = parseToArray(input);
@@ -37,6 +43,12 @@ export function parseToProperties(input, options) {
 }
 PropertiesParser.parseToProperties = parseToProperties;
 
+/**
+ * Convert parsed array to a properties object.
+ * @param {Array} array The source array to be converted.
+ * @param {Object} [options] Options for converting
+ * @returns {object} Converted properties object.
+ */
 export function arrayToProperties(array, options) {
   options = parseOptions(options, parseToPropertiesOptions);
   let properties = {};
@@ -88,6 +100,12 @@ export function arrayToProperties(array, options) {
 PropertiesParser.arrayToProperties = arrayToProperties;
 
 
+/**
+ * Normalize options.
+ * @param {*} options Options to be parsed; it can be object, boolean, null or undefined.
+ * @param {!Array<string>} availableOptionNames All possible option names.
+ * @returns {object} Normalized options.
+ */
 function parseOptions(options, availableOptionNames) {
   // Fix `null`, `false` as the options
   options = options || {};
@@ -114,10 +132,20 @@ function parseOptions(options, availableOptionNames) {
   return options;
 }
 
+/**
+ * Replce '\\\\' sequence with '\\' character.
+ * @param {string} input String to be mutated.
+ * @returns {string} Unescaped input.
+ */
 function unescapeBackslashes(input) {
   return input.replace(/\\\\/g, '\\');
 }
 
+/**
+ * Turn dot separated string into an array of relevant components.
+ * @param {string} key The dot separated string.
+ * @returns {Array} Array of key components.
+ */
 function parseNamespace(key) {
   return key.split('.');
 }

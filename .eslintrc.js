@@ -10,7 +10,9 @@ module.exports = {
     }],
     "no-multi-spaces": [2, { "ignoreEOLComments": true }],
     "no-multiple-empty-lines": [1, { "max": 2 }],
+    "require-jsdoc": [1],
     "semi": [2, "always"],
     "space-before-function-paren": [2, "never"],
+    "valid-jsdoc": [1],
   },
 };
