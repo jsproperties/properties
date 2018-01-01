@@ -4,6 +4,8 @@
 JavaScript .properties parser
 -----------------------------
 
+[![Build Status](https://travis-ci.org/jsproperties/parser.svg?branch=master)](https://travis-ci.org/jsproperties/parser)
+
 This is a parser written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
 
 The parser can return parsed properties object ([`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToArray`](#parseToArray)) as an array of objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
