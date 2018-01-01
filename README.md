@@ -235,3 +235,7 @@ yarn run lint
 # or
 npm run lint
 ```
+
+## LICENSE
+
+The MIT License. See [LICENSE] file.

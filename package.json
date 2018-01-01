@@ -10,6 +10,7 @@
   "repository": "jsproperties/parser",
   "homepage": "https://github.com/jsproperties/parser",
   "bugs": "https://github.com/jsproperties/parser/issues",
+  "license": "MIT",
   "author": "pallxk <github@pallxk.com>",
   "main": "lib/index.js",
   "scripts": {
