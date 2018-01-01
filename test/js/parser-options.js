@@ -1,3 +1,5 @@
+'use strict';
+
 const optionNames = ['all', 'original', 'eol', 'location'];
 let optionsToTest = [];
 
