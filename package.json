@@ -1,6 +1,6 @@
 {
   "name": "@js.properties/parser",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "JavaScript .properties parser",
   "keywords": [
     ".properties",
@@ -13,6 +13,14 @@
   "license": "MIT",
   "author": "pallxk <github@pallxk.com>",
   "main": "lib/index.js",
+  "files":[
+    "src/*.js",
+    "src/*.pegjs",
+    "lib/*.js",
+    "lib/*.map",
+    "dist/*.js",
+    "dist/*.map"
+  ],
   "scripts": {
     "test": "tap test/js/*.test.js",
     "test:snapshot": "node test/js/parse.test.js --gen && node test/js/namespace.test.js --gen",
