@@ -39,6 +39,12 @@
       "request": "launch",
       "name": "Test options.js",
       "program": "${workspaceFolder}/test/js/options.test.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test malformed.js",
+      "program": "${workspaceFolder}/test/js/malformed.test.js"
     }
   ]
 }

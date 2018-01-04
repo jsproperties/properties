@@ -1,0 +1,218 @@
+[
+  {
+    "key": "a\\=b",
+    "element": "c\\=d=e",
+    "original": "a\\=b = c\\=d=e",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 0,
+        "line": 1,
+        "column": 1
+      },
+      "end": {
+        "offset": 13,
+        "line": 1,
+        "column": 14
+      }
+    }
+  },
+  {
+    "key": "f\\:g",
+    "element": "h\\:i:j",
+    "original": "f\\:g : h\\:i:j",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 14,
+        "line": 2,
+        "column": 1
+      },
+      "end": {
+        "offset": 27,
+        "line": 2,
+        "column": 14
+      }
+    }
+  },
+  {
+    "key": "k\\ l",
+    "element": "m\\ n o",
+    "original": "k\\ l   m\\ n o",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 28,
+        "line": 3,
+        "column": 1
+      },
+      "end": {
+        "offset": 41,
+        "line": 3,
+        "column": 14
+      }
+    }
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 42,
+        "line": 4,
+        "column": 1
+      },
+      "end": {
+        "offset": 42,
+        "line": 4,
+        "column": 1
+      }
+    }
+  },
+  {
+    "key": "f\\to\\to",
+    "element": "b\\fa\\fr",
+    "original": "f\\to\\to = b\\fa\\fr",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 43,
+        "line": 5,
+        "column": 1
+      },
+      "end": {
+        "offset": 60,
+        "line": 5,
+        "column": 18
+      }
+    }
+  },
+  {
+    "key": "f\\ro\\ro",
+    "element": "b\\na\\nr",
+    "original": "f\\ro\\ro = b\\na\\nr",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 61,
+        "line": 6,
+        "column": 1
+      },
+      "end": {
+        "offset": 78,
+        "line": 6,
+        "column": 18
+      }
+    }
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 79,
+        "line": 7,
+        "column": 1
+      },
+      "end": {
+        "offset": 79,
+        "line": 7,
+        "column": 1
+      }
+    }
+  },
+  {
+    "key": "a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z",
+    "element": "a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z",
+    "original": "a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z = a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 80,
+        "line": 8,
+        "column": 1
+      },
+      "end": {
+        "offset": 233,
+        "line": 8,
+        "column": 154
+      }
+    }
+  },
+  {
+    "key": "u\\u1234u",
+    "element": "u\\u5678u",
+    "original": "u\\u1234u = u\\u5678u",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 234,
+        "line": 9,
+        "column": 1
+      },
+      "end": {
+        "offset": 253,
+        "line": 9,
+        "column": 20
+      }
+    }
+  },
+  {
+    "key": "u\\uabcdu",
+    "element": "u\\ucdefu",
+    "original": "u\\uabcdu = u\\ucdefu",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 254,
+        "line": 10,
+        "column": 1
+      },
+      "end": {
+        "offset": 273,
+        "line": 10,
+        "column": 20
+      }
+    }
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 274,
+        "line": 11,
+        "column": 1
+      },
+      "end": {
+        "offset": 274,
+        "line": 11,
+        "column": 1
+      }
+    }
+  },
+  {
+    "key": "U\\UWXYZU",
+    "element": "U\\UghijU",
+    "original": "U\\UWXYZU = U\\UghijU",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 275,
+        "line": 12,
+        "column": 1
+      },
+      "end": {
+        "offset": 294,
+        "line": 12,
+        "column": 20
+      }
+    }
+  }
+]

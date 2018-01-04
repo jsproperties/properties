@@ -62,8 +62,8 @@ export function arrayToProperties(array, options) {
 
     // Parsed array adheres to what user authored,
     // while in properties, we need to unescape backslashes.
-    key = unescapeBackslashes(key);
-    element = unescapeBackslashes(element);
+    key = unescapeProperty(key);
+    element = unescapeProperty(element);
 
     // Assign to properties by key, later entries overwrite previous ones
     if (options.namespace) {
@@ -133,12 +133,28 @@ function parseOptions(options, availableOptionNames) {
 }
 
 /**
- * Replce '\\\\' sequence with '\\' character.
+ * Unescape backslash escaped sequences.
  * @param {string} input String to be mutated.
  * @returns {string} Unescaped input.
+ * @throws {SyntaxError} Invalid Unicode escape sequence
  */
-function unescapeBackslashes(input) {
-  return input.replace(/\\\\/g, '\\');
+function unescapeProperty(input) {
+  // Unescape unicode
+  let output = input.replace(/\\u([0-9A-Fa-f]{0,4})/g, (match, code) => {
+    if (code.length !== 4) throw new SyntaxError('Invalid Unicode escape sequence');
+    return String.fromCharCode(parseInt(code, 16));
+  });
+
+  // Unescape other single character
+  return output.replace(/\\(.)/g, (match, escaped) => {
+    switch (escaped) {
+      case 'f': return '\f';
+      case 'n': return '\n';
+      case 'r': return '\r';
+      case 't': return '\t';
+      default: return escaped;
+    }
+  });
 }
 
 /**

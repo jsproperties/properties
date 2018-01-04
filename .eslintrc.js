@@ -7,6 +7,7 @@ module.exports = {
       "FunctionDeclaration": { "parameters": 2 },
       "FunctionExpression": { "parameters": 2 },
       "MemberExpression": 2,
+      "SwitchCase": 1,
     }],
     "no-multi-spaces": [2, { "ignoreEOLComments": true }],
     "no-multiple-empty-lines": [1, { "max": 2 }],

@@ -136,6 +136,8 @@ All options default to `false`.
 
 **Returns:** `object`
 
+**Throws:** `SyntaxError` Invalid Unicode escape sequence
+
 <a id="parseToArray"></a>
 ### Method: parseToArray(string [, options ])
 
