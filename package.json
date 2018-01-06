@@ -13,9 +13,11 @@
   "license": "MIT",
   "author": "pallxk <github@pallxk.com>",
   "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "files":[
     "src/*.js",
     "src/*.pegjs",
+    "types/*.ts",
     "lib/*.js",
     "lib/*.map",
     "dist/*.js",
