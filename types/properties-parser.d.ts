@@ -21,13 +21,21 @@ export function entriesToProperties(
 
 
 // Entry
-export interface Entry {
-  key: string | null;
-  element: string | null;
+interface EntryBase {
   original?: string;
   eol?: string | null;
   location?: Location;
 }
+export interface PropertyEntry extends EntryBase {
+  key: string;
+  element: string;
+}
+export interface BlankEntry extends EntryBase {
+  key: null;
+  element: null;
+}
+export interface CommentEntry extends BlankEntry { /* empty */ }
+type Entry = PropertyEntry | BlankEntry | CommentEntry;
 
 // Location
 export interface Location {
@@ -43,9 +51,13 @@ export interface Position {
 }
 
 // Properties
-export interface Properties {
+export interface FlatProperties {
   [key: string]: string;
 }
+export interface NamespacedProperties {
+  [key: string]: string | NamespacedProperties;
+}
+type Properties = FlatProperties | NamespacedProperties;
 
 
 // Options
