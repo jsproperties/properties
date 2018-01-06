@@ -5,6 +5,8 @@ JavaScript .properties parser
 -----------------------------
 
 [![Build Status](https://travis-ci.org/jsproperties/parser.svg?branch=master)](https://travis-ci.org/jsproperties/parser)
+[![npm](https://img.shields.io/npm/v/@js.properties/parser.svg)](https://www.npmjs.com/package/@js.properties/parser)
+[![license](https://img.shields.io/github/license/jsproperties/parser.svg)](LICENSE)
 
 This is a parser written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
 
@@ -242,4 +244,4 @@ npm run lint
 
 ## LICENSE
 
-The MIT License. See [LICENSE] file.
+The MIT License. See [LICENSE](LICENSE) file.
