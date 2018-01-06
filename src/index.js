@@ -5,7 +5,7 @@ import * as PropertiesParser from './properties.pegjs';
 export * from './properties.pegjs';
 
 
-const parseToArrayOptions = [
+const parseToEntriesOptions = [
   'all',        // Include empty and blank lines
   'original',   // Include original logical line in output
   'eol',        // Include eol (end of line) in output
@@ -24,11 +24,11 @@ const parseToPropertiesOptions = [
  * @param {*} [options] Options for parsing.
  * @returns {Array} Parsed result in array.
  */
-export function parseToArray(input, options) {
-  options = parseOptions(options, parseToArrayOptions);
+export function parseToEntries(input, options) {
+  options = parseOptions(options, parseToEntriesOptions);
   return PropertiesParser.parse(input, options);
 }
-PropertiesParser.parseToArray = parseToArray;
+PropertiesParser.parseToEntries = parseToEntries;
 
 /**
  * Parse .properties file content to a properties object, with property key as
@@ -38,22 +38,22 @@ PropertiesParser.parseToArray = parseToArray;
  * @returns {object} Parsed result in properties object.
  */
 export function parseToProperties(input, options) {
-  let parsedArray = parseToArray(input);
-  return arrayToProperties(parsedArray, options);
+  let entries = parseToEntries(input);
+  return entriesToProperties(entries, options);
 }
 PropertiesParser.parseToProperties = parseToProperties;
 
 /**
- * Convert parsed array to a properties object.
- * @param {Array} array The source array to be converted.
+ * Convert parsed entries to a properties object.
+ * @param {Array} entries Entries to be converted.
  * @param {Object} [options] Options for converting
  * @returns {object} Converted properties object.
  */
-export function arrayToProperties(array, options) {
+export function entriesToProperties(entries, options) {
   options = parseOptions(options, parseToPropertiesOptions);
   let properties = {};
 
-  for (let entry of array) {
+  for (let entry of entries) {
     // Only key and element are relevant
     let { key, element } = entry;
 
@@ -97,7 +97,7 @@ export function arrayToProperties(array, options) {
 
   return properties;
 }
-PropertiesParser.arrayToProperties = arrayToProperties;
+PropertiesParser.entriesToProperties = entriesToProperties;
 
 
 /**

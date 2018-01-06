@@ -8,7 +8,7 @@ JavaScript .properties parser
 
 This is a parser written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
 
-The parser can return parsed properties object ([`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToArray`](#parseToArray)) as an array of objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
+The parser can return parsed properties object ([`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToEntries`](#parseToEntries)) as an array of entry objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
 
 As to the raw parsing result:
 
@@ -50,7 +50,7 @@ const options = {   // options is optional
   eol: true,        // Include eol (end of line) in output
   location: true,   // Include location info in output
 };
-let output = PropertiesParser.parseToArray(input, options);
+let output = PropertiesParser.parseToEntries(input, options);
 ```
 
 `demo.html` (Browser):
@@ -60,7 +60,7 @@ let output = PropertiesParser.parseToArray(input, options);
 <script src="properties-parser.min.js"></script>
 <script>
 // Input can be entered manually or read via FileReader API
-var output = PropertiesParser.parseToArray('...');
+var output = PropertiesParser.parseToEntries('...');
 </script>
 ```
 
@@ -138,10 +138,10 @@ All options default to `false`.
 
 **Throws:** `SyntaxError` Invalid Unicode escape sequence
 
-<a id="parseToArray"></a>
-### Method: parseToArray(string [, options ])
+<a id="parseToEntries"></a>
+### Method: parseToEntries(string [, options ])
 
-<a id="parseToArray-options"></a>
+<a id="parseToEntries-options"></a>
 #### Object: options
 
 Option     | Type    | Description

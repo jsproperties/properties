@@ -20,7 +20,7 @@ let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
 if (!gen) {
   tap.plan(filenames.length *
       (
-        optionsToTest.length + // options for parseToArray
+        optionsToTest.length + // options for parseToEntries
         1                      // one more for parseToProperties
       ));
 }
@@ -40,8 +40,8 @@ filenames.forEach(filename => {
       location: true,
     };
 
-    // Generate output via parseToArray
-    let actualEntries = PropertiesParser.parseToArray(input, options);
+    // Generate output via parseToEntries
+    let actualEntries = PropertiesParser.parseToEntries(input, options);
     let actualString = JSON.stringify(actualEntries, null, 2);
 
     // Write output for later tests
@@ -58,17 +58,17 @@ filenames.forEach(filename => {
         path.join(dataDir, filename + '.json'),
         actualString);
   } else {
-    // Test parseToArray
+    // Test parseToEntries
 
     // Get snapshot output
     let snapshotString = fs.readFileSync(
         path.join(dataDir, filename.replace(rproperties, '.json')), 'utf8');
     let snapshotEntries = JSON.parse(snapshotString);
 
-    // Test each options used by parseToArray
+    // Test each options used by parseToEntries
     for (let options of optionsToTest) {
       // Generate output
-      let actualEntries = PropertiesParser.parseToArray(input, options);
+      let actualEntries = PropertiesParser.parseToEntries(input, options);
 
       // Make a clone as we are going to modify what's expected
       let expectedEntries = _.cloneDeep(snapshotEntries);
@@ -91,9 +91,9 @@ filenames.forEach(filename => {
 
       // Do the test
       if (_.isEqual(actualEntries, expectedEntries)) {
-        tap.pass(`${filename} parseToArray ${JSON.stringify(options)} passed.`);
+        tap.pass(`${filename} parseToEntries ${JSON.stringify(options)} passed.`);
       } else {
-        tap.fail(`${filename} parseToArray ${JSON.stringify(options)} failed.`);
+        tap.fail(`${filename} parseToEntries ${JSON.stringify(options)} failed.`);
       }
     }
 

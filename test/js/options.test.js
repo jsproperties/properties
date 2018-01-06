@@ -12,7 +12,7 @@ const dataDir = path.resolve(__dirname, '../data');
 const rproperties = /\.properties$/;
 
 // Option pairs should result in the same output
-const parseToArrayOptionPairs = [
+const parseToEntriesOptionPairs = [
   [undefined, {}],
   [null, {}],
   [false, { '': false }],
@@ -44,16 +44,16 @@ filenames.forEach(filename => {
   // Get input
   let input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
 
-  // Test each pair of options for parseToArray
-  for (let options of parseToArrayOptionPairs) {
-    let x = PropertiesParser.parseToArray(input, options[0]);
-    let y = PropertiesParser.parseToArray(input, options[1]);
+  // Test each pair of options for parseToEntries
+  for (let options of parseToEntriesOptionPairs) {
+    let x = PropertiesParser.parseToEntries(input, options[0]);
+    let y = PropertiesParser.parseToEntries(input, options[1]);
 
     // Do the test
     if (_.isEqual(x, y)) {
-      tap.pass(`${filename} parseToArray ${JSON.stringify(options[0])} matches ${JSON.stringify(options[1])}.`);
+      tap.pass(`${filename} parseToEntries ${JSON.stringify(options[0])} matches ${JSON.stringify(options[1])}.`);
     } else {
-      tap.fail(`${filename} parseToArray ${JSON.stringify(options[0])} does not match ${JSON.stringify(options[1])}.`);
+      tap.fail(`${filename} parseToEntries ${JSON.stringify(options[0])} does not match ${JSON.stringify(options[1])}.`);
     }
   }
 
