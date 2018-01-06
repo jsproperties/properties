@@ -1,9 +1,6 @@
 // Import PEG.js generated parser through pegjs-loader
 import * as PropertiesParser from './properties.pegjs';
 
-// Reexport everything PEG.js generated parser exports
-export * from './properties.pegjs';
-
 
 const parseToEntriesOptions = [
   'all',        // Include empty and blank lines
@@ -28,7 +25,6 @@ export function parseToEntries(input, options) {
   options = parseOptions(options, parseToEntriesOptions);
   return PropertiesParser.parse(input, options);
 }
-PropertiesParser.parseToEntries = parseToEntries;
 
 /**
  * Parse .properties file content to a properties object, with property key as
@@ -41,7 +37,6 @@ export function parseToProperties(input, options) {
   let entries = parseToEntries(input);
   return entriesToProperties(entries, options);
 }
-PropertiesParser.parseToProperties = parseToProperties;
 
 /**
  * Convert parsed entries to a properties object.
@@ -97,7 +92,6 @@ export function entriesToProperties(entries, options) {
 
   return properties;
 }
-PropertiesParser.entriesToProperties = entriesToProperties;
 
 
 /**
@@ -168,4 +162,4 @@ function parseNamespace(key) {
 
 
 // Export everything this module exports as a default export
-export default PropertiesParser;
+export default exports;
