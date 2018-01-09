@@ -1,5 +1,5 @@
-// Type definitions for @js.properties/parser
-// Project: https://github.com/jsproperties/parser
+// Type definitions for @js.properties/properties
+// Project: https://github.com/jsproperties/properties
 
 
 // Methods

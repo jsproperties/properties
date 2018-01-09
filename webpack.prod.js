@@ -6,8 +6,8 @@ const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
   output: {
-    filename: 'properties-parser.min.js',
-    sourceMapFilename: 'properties-parser.min.map',
+    filename: 'properties.min.js',
+    sourceMapFilename: 'properties.min.map',
   },
   devtool: 'source-map',
   plugins: [

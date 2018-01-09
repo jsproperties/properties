@@ -1,11 +1,11 @@
-// Type definitions for @js.properties/parser
-// Project: https://github.com/jsproperties/parser
+// Type definitions for @js.properties/properties
+// Project: https://github.com/jsproperties/properties
 
 // UMD global
-export as namespace PropertiesParser;
+export as namespace Properties;
 
-import * as PropertiesParser from './properties-parser';
+import * as Properties from './properties';
 // Default export
-export default PropertiesParser;
+export default Properties;
 // Export everything directly
-export * from './properties-parser';
+export * from './properties';

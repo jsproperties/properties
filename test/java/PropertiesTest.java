@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class PropertiesParserTest {
+public class PropertiesTest {
   public static void main(String args[]) {
     Properties properties = new Properties();
 

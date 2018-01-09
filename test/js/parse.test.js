@@ -6,7 +6,7 @@ const path = require('path');
 const _ = require('lodash');
 const tap = require('tap');
 
-const PropertiesParser = require('../..');
+const Properties = require('../..');
 const optionsToTest = require('./parser-options');
 
 const dataDir = path.resolve(__dirname, '../data');
@@ -41,7 +41,7 @@ filenames.forEach(filename => {
     };
 
     // Generate output via parseToEntries
-    let actualEntries = PropertiesParser.parseToEntries(input, options);
+    let actualEntries = Properties.parseToEntries(input, options);
     let actualString = JSON.stringify(actualEntries, null, 2);
 
     // Write output for later tests
@@ -50,7 +50,7 @@ filenames.forEach(filename => {
         actualString);
 
     // Generate output via parseToProperties
-    actualEntries = PropertiesParser.parseToProperties(input);
+    actualEntries = Properties.parseToProperties(input);
     actualString = JSON.stringify(actualEntries, null, 2);
 
     // Write output for later tests
@@ -68,7 +68,7 @@ filenames.forEach(filename => {
     // Test each options used by parseToEntries
     for (let options of optionsToTest) {
       // Generate output
-      let actualEntries = PropertiesParser.parseToEntries(input, options);
+      let actualEntries = Properties.parseToEntries(input, options);
 
       // Make a clone as we are going to modify what's expected
       let expectedEntries = _.cloneDeep(snapshotEntries);
@@ -105,7 +105,7 @@ filenames.forEach(filename => {
     snapshotEntries = JSON.parse(snapshotString);
 
     // Generate output
-    let actualEntries = PropertiesParser.parseToProperties(input);
+    let actualEntries = Properties.parseToProperties(input);
 
     // Do the test
     if (_.isEqual(actualEntries, snapshotEntries)) {

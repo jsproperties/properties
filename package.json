@@ -1,15 +1,15 @@
 {
-  "name": "@js.properties/parser",
-  "version": "0.2.0",
+  "name": "@js.properties/properties",
+  "version": "0.3.0-pre",
   "description": "JavaScript .properties parser",
   "keywords": [
     ".properties",
     "properties",
     "parser"
   ],
-  "repository": "jsproperties/parser",
-  "homepage": "https://github.com/jsproperties/parser",
-  "bugs": "https://github.com/jsproperties/parser/issues",
+  "repository": "jsproperties/properties",
+  "homepage": "https://github.com/jsproperties/properties",
+  "bugs": "https://github.com/jsproperties/properties/issues",
   "license": "MIT",
   "author": "pallxk <github@pallxk.com>",
   "main": "lib/index.js",

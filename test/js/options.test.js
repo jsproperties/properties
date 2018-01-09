@@ -6,7 +6,7 @@ const path = require('path');
 const _ = require('lodash');
 const tap = require('tap');
 
-const PropertiesParser = require('../..');
+const Properties = require('../..');
 
 const dataDir = path.resolve(__dirname, '../data');
 const rproperties = /\.properties$/;
@@ -46,8 +46,8 @@ filenames.forEach(filename => {
 
   // Test each pair of options for parseToEntries
   for (let options of parseToEntriesOptionPairs) {
-    let x = PropertiesParser.parseToEntries(input, options[0]);
-    let y = PropertiesParser.parseToEntries(input, options[1]);
+    let x = Properties.parseToEntries(input, options[0]);
+    let y = Properties.parseToEntries(input, options[1]);
 
     // Do the test
     if (_.isEqual(x, y)) {
@@ -59,8 +59,8 @@ filenames.forEach(filename => {
 
   // Test each pair of options for parseToProperties
   for (let options of parseToPropertiesOptionPairs) {
-    let x = PropertiesParser.parseToProperties(input, options[0]);
-    let y = PropertiesParser.parseToProperties(input, options[1]);
+    let x = Properties.parseToProperties(input, options[0]);
+    let y = Properties.parseToProperties(input, options[1]);
 
     // Do the test
     if (_.isEqual(x, y)) {

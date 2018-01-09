@@ -5,7 +5,7 @@ const path = require('path');
 
 const tap = require('tap');
 
-const PropertiesParser = require('../..');
+const Properties = require('../..');
 
 const dataDir = path.resolve(__dirname, '../data/malformed');
 const rproperties = /\.properties$/;
@@ -20,7 +20,7 @@ filenames.forEach(filename => {
 
   // Try parse
   try {
-    PropertiesParser.parseToProperties(input);
+    Properties.parseToProperties(input);
   } catch (e) {
     tap.pass(`Malformed ${filename} throws.`);
     return;

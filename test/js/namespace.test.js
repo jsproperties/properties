@@ -6,7 +6,7 @@ const path = require('path');
 const _ = require('lodash');
 const tap = require('tap');
 
-const PropertiesParser = require('../..');
+const Properties = require('../..');
 
 const options = {
   namespace: true,
@@ -30,7 +30,7 @@ filenames.forEach(filename => {
   // Write output or do the test
   if (gen) {
     // Generate output
-    let actualEntries = PropertiesParser.parseToProperties(input, options);
+    let actualEntries = Properties.parseToProperties(input, options);
     let actualString = JSON.stringify(actualEntries, null, 2);
 
     // Write output for later tests
@@ -44,7 +44,7 @@ filenames.forEach(filename => {
     let snapshotEntries = JSON.parse(snapshotString);
 
     // Generate output
-    let actualEntries = PropertiesParser.parseToProperties(input, options);
+    let actualEntries = Properties.parseToProperties(input, options);
 
     // Do the test
     if (_.isEqual(actualEntries, snapshotEntries)) {
