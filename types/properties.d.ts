@@ -6,32 +6,32 @@
 
 export function parseToEntries(
   input: string,
-  options: ParseToEntriesOptions
+  options?: ParseToEntriesOptions
 ): Entry[];
 
 export function parseToProperties(
   input: string,
-  options: ParseToPropertiesOptions
+  options?: ParseToPropertiesOptions
 ): Properties;
 
 export function entriesToProperties(
   entries: Entry[],
-  options: ParseToPropertiesOptions
+  options?: ParseToPropertiesOptions
 ): Properties;
 
 export function stringify(
   input: Entry[] | Properties,
-  options: StringifyOptions
+  options?: StringifyOptions
 ): string;
 
 export function stringifyFromEntries(
   input: Entry[],
-  options: StringifyOptions
+  options?: StringifyOptions
 ): string;
 
 export function stringifyFromProperties(
   input: Properties,
-  options: StringifyOptions
+  options?: StringifyOptions
 ): string;
 
 
