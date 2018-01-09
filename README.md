@@ -1,14 +1,14 @@
 @js.properties/properties
 =========================
 
-JavaScript .properties parser
------------------------------
+JavaScript .properties parser & stringifier
+-------------------------------------------
 
 [![Build Status](https://travis-ci.org/jsproperties/properties.svg?branch=master)](https://travis-ci.org/jsproperties/properties)
 [![npm](https://img.shields.io/npm/v/@js.properties/properties.svg)](https://www.npmjs.com/package/@js.properties/properties)
 [![license](https://img.shields.io/github/license/jsproperties/properties.svg)](LICENSE)
 
-This is a parser written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
+This is a parser and stringifier written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
 
 The parser can return parsed properties object ([`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToEntries`](#parseToEntries)) as an array of entry objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
 
@@ -17,6 +17,8 @@ As to the raw parsing result:
 * Each *logical line* of input .properties file is parsed into an object, with the **original** logical line, **eol** info, and/or line **location** info optionally kept;
 * Properties with duplicate keys are kept in the raw output so that one can build high-level applications reporting them;
 * Blank and comment lines can be kept as well so that there is no info loss of the original file after parsing. This could be useful for something like .properties IDE.
+
+The stingifier ([`stringify`](#stringify), [`stringifyFromProperties`](#stringifyFromProperties) or [`stringifyFromEntries`](#stringifyFromEntries)) effectively does the reverse of what the parser does.
 
 
 ## Installation
@@ -187,6 +189,31 @@ Note: `eol` will be `null` if this is the last line and contains no final eol.
 ### Object: Position
 
 `{ offset: number, line: number, column: number }`
+
+<a id="stringifyFromProperties"></a>
+### Method: stringifyFromProperties(object [, options ])
+
+Turn properties object into .properties file string.
+
+<a id="stringifyFromEntries"></a>
+### Method: stringifyFromEntries(Array\<PropertyEntry> [, options ])
+
+When stringifying from entries, if `original` is set in the entry, it's used; otherwise, property is computed from `key`, `sep` and `element`.
+
+<a id="stringify"></a>
+### Method: stringify(object | Array\<PropertyEntry> [, options ])
+
+This is an alias for `stringifyFromProperties` and `stringifyFromEntries` depending on the type of arguments.
+
+<a id="stringify-options"></a>
+#### Object: stringify options
+
+Option | Type    | Default | Description
+------ | ------- | ------- | ----
+`sep`  | string  | ` = `   | The separator to use [\*]
+`eol`  | string  | `\r\n`  | The eol (end of line) to use [\*]
+
+[\*] Thses options are used in `stringify`, `stringifyFromProperties` and `stringifyFromEntries`. In the case of stringifying from entries, option values are considered only if relevant field does not exist in the entry.
 
 ---
 

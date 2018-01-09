@@ -45,6 +45,18 @@
       "request": "launch",
       "name": "Test malformed.js",
       "program": "${workspaceFolder}/test/js/malformed.test.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test stringify-from-entries.js",
+      "program": "${workspaceFolder}/test/js/stringify-from-entries.test.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test stringify-from-properties.js",
+      "program": "${workspaceFolder}/test/js/stringify-from-properties.test.js"
     }
   ]
 }

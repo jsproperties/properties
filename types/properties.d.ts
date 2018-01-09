@@ -19,6 +19,21 @@ export function entriesToProperties(
   options: ParseToPropertiesOptions
 ): Properties;
 
+export function stringify(
+  input: Entry[] | Properties,
+  options: StringifyOptions
+): string;
+
+export function stringifyFromEntries(
+  input: Entry[],
+  options: StringifyOptions
+): string;
+
+export function stringifyFromProperties(
+  input: Properties,
+  options: StringifyOptions
+): string;
+
 
 // Entry
 interface EntryBase {
@@ -99,3 +114,12 @@ export interface IParseToPropertiesOptions extends Options {
  * Options can be specified as a boolean or an object.
  */
 type ParseToPropertiesOptions = boolean | IParseToPropertiesOptions;
+
+
+/**
+ * Options for stringify properties.
+ */
+export interface StringifyOptions {
+  sep?: string;
+  eol?: string;
+}

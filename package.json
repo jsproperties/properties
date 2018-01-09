@@ -1,11 +1,14 @@
 {
   "name": "@js.properties/properties",
   "version": "0.3.0-pre",
-  "description": "JavaScript .properties parser",
+  "description": "JavaScript .properties parser and stringifier",
   "keywords": [
     ".properties",
     "properties",
-    "parser"
+    "parser",
+    "parse",
+    "stringifier",
+    "stringify"
   ],
   "repository": "jsproperties/properties",
   "homepage": "https://github.com/jsproperties/properties",
