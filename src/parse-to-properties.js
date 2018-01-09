@@ -10,6 +10,20 @@ const parseToPropertiesOptions = [
 /**
  * Parse .properties file content to a properties object, with property key as
  * the key and property element as the value.
+ *
+ * Alias of parseToProperties
+ *
+ * @param {string} input Properties file content in string.
+ * @param {*} [options] Options for parsing.
+ * @returns {object} Parsed result in properties object.
+ */
+export function parse(input, options) {
+  return parseToProperties(input, options);
+}
+
+/**
+ * Parse .properties file content to a properties object, with property key as
+ * the key and property element as the value.
  * @param {string} input Properties file content in string.
  * @param {*} [options] Options for parsing.
  * @returns {object} Parsed result in properties object.

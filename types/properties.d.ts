@@ -4,6 +4,11 @@
 
 // Methods
 
+export function parse(
+  input: string,
+  options?: ParseToPropertiesOptions
+): Properties;
+
 export function parseToEntries(
   input: string,
   options?: ParseToEntriesOptions

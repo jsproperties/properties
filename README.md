@@ -10,7 +10,7 @@ JavaScript .properties parser & stringifier
 
 This is a parser and stringifier written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
 
-The parser can return parsed properties object ([`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToEntries`](#parseToEntries)) as an array of entry objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
+The parser can return parsed properties object ([`parse`](#parse) or [`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToEntries`](#parseToEntries)) as an array of entry objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
 
 As to the raw parsing result:
 
@@ -112,7 +112,7 @@ Output with all options on:
 ]
 ```
 
-There is also a method `parseToProperties(input)` which generates output like:
+There is also a method `parseToProperties(input)` (alias `parse`) which generates output like:
 
 ```
 {
@@ -126,6 +126,9 @@ There is also a method `parseToProperties(input)` which generates output like:
 
 <a id="parseToProperties"></a>
 ### Method: parseToProperties(string [, options ])
+
+<a id="parse"></a>
+### Method Alias: parse(string [, options ])
 
 <a id="parseToProperties-options"></a>
 #### Object: options
