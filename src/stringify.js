@@ -55,10 +55,28 @@ export function stringifyFromProperties(properties, options) {
 
   let output = '';
   for (let key in properties) {
-    output += escapeKey(key) +
-        options.sep +
-        escapeElement(properties[key]) +
-        options.eol;
+    let element = properties[key];
+    if (typeof element === 'string') {
+      if (options.namespace) {
+        output += escapeKey(options.namespace);
+
+        // Add a dot after namespace if key is not empty
+        if (key) {
+          output += '.';
+        }
+      }
+      output += escapeKey(key) +
+          options.sep +
+          escapeElement(element) +
+          options.eol;
+    } else {
+      // Namespaced properties
+      let namespace = options.namespace
+        ? options.namespace + '.' + key
+        : key;
+      output += stringifyFromProperties(element,
+          Object.assign({}, options, { namespace: namespace }));
+    }
   }
 
   return output;

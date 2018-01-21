@@ -211,12 +211,15 @@ This is an alias for `stringifyFromProperties` and `stringifyFromEntries` depend
 <a id="stringify-options"></a>
 #### Object: stringify options
 
-Option | Type    | Default | Description
------- | ------- | ------- | ----
-`sep`  | string  | ` = `   | The separator to use [\*]
-`eol`  | string  | `\r\n`  | The eol (end of line) to use [\*]
+Option      | Type    | Default  | Description
+----------- | ------- | -------- | ----
+`sep`       | string  | `" = "`  | The separator to use [\*]
+`eol`       | string  | `"\r\n"` | The eol (end of line) to use [\*]
+`namespace` | string  | `""`     | A namespace to prefix all keys [\*\*]
 
 [\*] Thses options are used in `stringify`, `stringifyFromProperties` and `stringifyFromEntries`. In the case of stringifying from entries, option values are considered only if relevant field does not exist in the entry.
+
+[\*\*] Used only in `stringify` or `stringifyFromProperties`.
 
 ---
 

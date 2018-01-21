@@ -70,5 +70,77 @@
         "column": 16
       }
     }
+  },
+  {
+    "key": null,
+    "element": null,
+    "original": "",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 56,
+        "line": 5,
+        "column": 1
+      },
+      "end": {
+        "offset": 56,
+        "line": 5,
+        "column": 1
+      }
+    }
+  },
+  {
+    "key": "a.b1",
+    "element": "a.b1",
+    "original": "a.b1 = a.b1",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 57,
+        "line": 6,
+        "column": 1
+      },
+      "end": {
+        "offset": 68,
+        "line": 6,
+        "column": 12
+      }
+    }
+  },
+  {
+    "key": "a.b2.c1",
+    "element": "a.b2.c1",
+    "original": "a.b2.c1 = a.b2.c1",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 69,
+        "line": 7,
+        "column": 1
+      },
+      "end": {
+        "offset": 86,
+        "line": 7,
+        "column": 18
+      }
+    }
+  },
+  {
+    "key": "a.b2.c2",
+    "element": "a.b2.c2",
+    "original": "a.b2.c2 = a.b2.c2",
+    "eol": "\n",
+    "location": {
+      "start": {
+        "offset": 87,
+        "line": 8,
+        "column": 1
+      },
+      "end": {
+        "offset": 104,
+        "line": 8,
+        "column": 18
+      }
+    }
   }
 ]

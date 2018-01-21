@@ -19,7 +19,8 @@ const gen = process.argv[2] === '--gen';
 // Get .properties test files
 const filenames = ['namespaced.properties'];
 if (!gen) {
-  tap.plan(filenames.length);
+  // Each file has 2 tests
+  tap.plan(filenames.length * 2);
 }
 
 // Parse, and snapshot or compare
@@ -41,16 +42,23 @@ filenames.forEach(filename => {
     // Get snapshot output
     let snapshotString = fs.readFileSync(
         path.join(dataDir, filename + '.namespaced.json'), 'utf8');
-    let snapshotEntries = JSON.parse(snapshotString);
+    let snapshotProperties = JSON.parse(snapshotString);
 
     // Generate output
-    let actualEntries = Properties.parseToProperties(input, options);
+    let actualProperties = Properties.parseToProperties(input, options);
 
     // Do the test
-    if (_.isEqual(actualEntries, snapshotEntries)) {
+    if (_.isEqual(actualProperties, snapshotProperties)) {
       tap.pass(`${filename} parseToProperties ${JSON.stringify(options)} passed.`);
     } else {
       tap.fail(`${filename} parseToProperties ${JSON.stringify(options)} failed.`);
     }
+
+    tap.ok(
+        _.isEqual(
+            Properties.parseToProperties(
+                Properties.stringifyFromProperties(actualProperties), options),
+            snapshotProperties),
+        `${filename} stringifyFromProperties ${JSON.stringify(options)}`);
   }
 });
