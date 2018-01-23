@@ -27,9 +27,10 @@
     "dist/*.map"
   ],
   "scripts": {
-    "test": "tap test/js/*.test.js",
-    "test:snapshot": "node test/js/parse.test.js --gen && node test/js/namespace.test.js --gen",
+    "test": "yon run lint && yon run tap",
     "lint": "eslint .",
+    "tap": "tap test/js/*.test.js",
+    "tap:snapshot": "node test/js/parse.test.js --gen && node test/js/namespace.test.js --gen",
     "prepare": "yon run pegjs && yon run babel && yon run webpack",
     "watch": "yon run pegjs:watch & yon run babel:watch & yon run webpack:watch",
     "pegjs": "pegjs -o src/properties.pegjs.js src/properties.pegjs",

@@ -252,7 +252,7 @@ yarn run prepare
 npm run prepare
 ```
 
-### Test
+### Test & Lint
 
 ```sh
 yarn test
@@ -260,15 +260,23 @@ yarn test
 npm test
 ```
 
+### Test Only
+
+```sh
+yarn tap
+# or
+npm tap
+```
+
 ### Update expected test output
 
 ```sh
-yarn run test:snapshot
+yarn run tap:snapshot
 # or
-npm run test:snapshot
+npm run tap:snapshot
 ```
 
-### Lint
+### Lint Only
 
 ```sh
 yarn run lint
