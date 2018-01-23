@@ -1,6 +1,8 @@
 @js.properties/parser
 =====================
 
+[DEPRECATED] **@js.properties/parser** has been renamed to **@js.properties/properties**
+
 JavaScript .properties parser
 -----------------------------
 
