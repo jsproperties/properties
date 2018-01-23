@@ -90,11 +90,8 @@ filenames.forEach(filename => {
       }
 
       // Do the test
-      if (_.isEqual(actualEntries, expectedEntries)) {
-        t.pass(`${filename} parseToEntries ${JSON.stringify(options)} passed.`);
-      } else {
-        t.fail(`${filename} parseToEntries ${JSON.stringify(options)} failed.`);
-      }
+      t.strictSame(actualEntries, expectedEntries,
+          `${filename} parseToEntries ${JSON.stringify(options)}`);
     }
 
     // Test parseToProperties
@@ -108,10 +105,7 @@ filenames.forEach(filename => {
     let actualEntries = Properties.parseToProperties(input);
 
     // Do the test
-    if (_.isEqual(actualEntries, snapshotEntries)) {
-      t.pass(`${filename} parseToProperties passed.`);
-    } else {
-      t.fail(`${filename} parseToProperties failed.`);
-    }
+    t.strictSame(actualEntries, snapshotEntries,
+        `${filename} parseToProperties`);
   }
 });

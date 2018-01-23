@@ -18,13 +18,8 @@ filenames.forEach(filename => {
   // Get input
   let input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
 
-  // Try parse
-  try {
-    Properties.parseToProperties(input);
-  } catch (e) {
-    t.pass(`Malformed ${filename} throws.`);
-    return;
-  }
-
-  t.fail(`Malformed ${filename} does not throw.`);
+  // Try parse, and it should throw
+  t.throws(() => Properties.parseToProperties(input),
+      { name: 'SyntaxError', message: 'Invalid Unicode escape sequence' },
+      `Malformed ${filename} throws.`);
 });

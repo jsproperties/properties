@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const _ = require('lodash');
 const t = require('tap');
 
 const Properties = require('../..');
@@ -39,8 +38,8 @@ filenames.forEach(filename => {
   // Stringify
   let keyElementString = Properties.stringify(keyElementEntries);
   // Parse stringified output and comapre again
-  t.ok(
-      _.isEqual(Properties.parseToProperties(keyElementString),
-          Properties.parseToProperties(actualString)),
+  t.strictSame(
+      Properties.parseToProperties(keyElementString),
+      Properties.parseToProperties(actualString),
       `${filename} stringifyFromEntries`);
 });

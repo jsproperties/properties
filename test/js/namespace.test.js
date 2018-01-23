@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const _ = require('lodash');
 const t = require('tap');
 
 const Properties = require('../..');
@@ -47,18 +46,15 @@ filenames.forEach(filename => {
     // Generate output
     let actualProperties = Properties.parseToProperties(input, options);
 
-    // Do the test
-    if (_.isEqual(actualProperties, snapshotProperties)) {
-      t.pass(`${filename} parseToProperties ${JSON.stringify(options)} passed.`);
-    } else {
-      t.fail(`${filename} parseToProperties ${JSON.stringify(options)} failed.`);
-    }
+    // Test parseToProperties
+    t.strictSame(actualProperties, snapshotProperties,
+        `${filename} parseToProperties ${JSON.stringify(options)}`);
 
-    t.ok(
-        _.isEqual(
-            Properties.parseToProperties(
-                Properties.stringifyFromProperties(actualProperties), options),
-            snapshotProperties),
+    // Test stringifyFromProperties
+    t.strictSame(
+        Properties.parseToProperties(
+            Properties.stringifyFromProperties(actualProperties), options),
+        snapshotProperties,
         `${filename} stringifyFromProperties ${JSON.stringify(options)}`);
   }
 });
