@@ -55,7 +55,6 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "lodash": "^4.17.4",
     "npm-watch": "^0.3.0",
     "pegjs": "^0.10.0",
     "pegjs-loader": "^0.5.4",

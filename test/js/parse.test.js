@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const _ = require('lodash');
 const t = require('tap');
 
 const Properties = require('../..');
@@ -71,11 +70,11 @@ filenames.forEach(filename => {
       let actualEntries = Properties.parseToEntries(input, options);
 
       // Make a clone as we are going to modify what's expected
-      let expectedEntries = _.cloneDeep(snapshotEntries);
+      let expectedEntries = JSON.parse(JSON.stringify(snapshotEntries));
 
       // Calculate what's expected based on parser options
       if (!options.all) {
-        expectedEntries = _.filter(expectedEntries, e => {
+        expectedEntries = expectedEntries.filter(e => {
           return e.key != null && e.element != null;
         });
       }
