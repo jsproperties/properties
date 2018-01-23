@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const tap = require('tap');
+const t = require('tap');
 
 const Properties = require('../..');
 
@@ -12,7 +12,7 @@ const rproperties = /\.properties$/;
 
 // Get .properties test files
 let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
-tap.plan(filenames.length);
+t.plan(filenames.length);
 
 filenames.forEach(filename => {
   // Get input
@@ -22,9 +22,9 @@ filenames.forEach(filename => {
   try {
     Properties.parseToProperties(input);
   } catch (e) {
-    tap.pass(`Malformed ${filename} throws.`);
+    t.pass(`Malformed ${filename} throws.`);
     return;
   }
 
-  tap.fail(`Malformed ${filename} does not throw.`);
+  t.fail(`Malformed ${filename} does not throw.`);
 });

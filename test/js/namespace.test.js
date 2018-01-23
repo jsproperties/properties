@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const _ = require('lodash');
-const tap = require('tap');
+const t = require('tap');
 
 const Properties = require('../..');
 
@@ -20,7 +20,7 @@ const gen = process.argv[2] === '--gen';
 const filenames = ['namespaced.properties'];
 if (!gen) {
   // Each file has 2 tests
-  tap.plan(filenames.length * 2);
+  t.plan(filenames.length * 2);
 }
 
 // Parse, and snapshot or compare
@@ -49,12 +49,12 @@ filenames.forEach(filename => {
 
     // Do the test
     if (_.isEqual(actualProperties, snapshotProperties)) {
-      tap.pass(`${filename} parseToProperties ${JSON.stringify(options)} passed.`);
+      t.pass(`${filename} parseToProperties ${JSON.stringify(options)} passed.`);
     } else {
-      tap.fail(`${filename} parseToProperties ${JSON.stringify(options)} failed.`);
+      t.fail(`${filename} parseToProperties ${JSON.stringify(options)} failed.`);
     }
 
-    tap.ok(
+    t.ok(
         _.isEqual(
             Properties.parseToProperties(
                 Properties.stringifyFromProperties(actualProperties), options),

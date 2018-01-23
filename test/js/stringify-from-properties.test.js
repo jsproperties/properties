@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const _ = require('lodash');
-const tap = require('tap');
+const t = require('tap');
 
 const Properties = require('../..');
 
@@ -13,7 +13,7 @@ const rproperties = /\.properties$/;
 
 // Get .properties test files
 let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
-tap.plan(filenames.length);
+t.plan(filenames.length);
 
 // Stringify and compare
 filenames.forEach(filename => {
@@ -31,7 +31,7 @@ filenames.forEach(filename => {
   // Do the test
   // Parsed stringified output is compared here, as stringified output from
   // properties object may differ from original input.
-  tap.ok(
+  t.ok(
       _.isEqual(Properties.parseToProperties(actualString),
           Properties.parseToProperties(expectedString)),
       `${filename} stringifyFromProperties`);

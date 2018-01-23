@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const _ = require('lodash');
-const tap = require('tap');
+const t = require('tap');
 
 const Properties = require('../..');
 
@@ -14,7 +14,7 @@ const rproperties = /\.properties$/;
 // Get .properties test files
 let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
 // Each test file has 2 tests to run
-tap.plan(filenames.length * 2);
+t.plan(filenames.length * 2);
 
 // Stringify and compare
 filenames.forEach(filename => {
@@ -31,7 +31,7 @@ filenames.forEach(filename => {
   let actualString = Properties.stringify(detailedEntries);
 
   // Do the first test for entries with addtional info (original, eol, sep, etc.)
-  tap.ok(actualString === expectedString, `${filename} stringifyFromEntries`);
+  t.ok(actualString === expectedString, `${filename} stringifyFromEntries`);
 
   // Second test for entries without additional info
   // Remove additional info in entries
@@ -39,7 +39,7 @@ filenames.forEach(filename => {
   // Stringify
   let keyElementString = Properties.stringify(keyElementEntries);
   // Parse stringified output and comapre again
-  tap.ok(
+  t.ok(
       _.isEqual(Properties.parseToProperties(keyElementString),
           Properties.parseToProperties(actualString)),
       `${filename} stringifyFromEntries`);

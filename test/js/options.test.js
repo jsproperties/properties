@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const _ = require('lodash');
-const tap = require('tap');
+const t = require('tap');
 
 const Properties = require('../..');
 
@@ -51,9 +51,9 @@ filenames.forEach(filename => {
 
     // Do the test
     if (_.isEqual(x, y)) {
-      tap.pass(`${filename} parseToEntries ${JSON.stringify(options[0])} matches ${JSON.stringify(options[1])}.`);
+      t.pass(`${filename} parseToEntries ${JSON.stringify(options[0])} matches ${JSON.stringify(options[1])}.`);
     } else {
-      tap.fail(`${filename} parseToEntries ${JSON.stringify(options[0])} does not match ${JSON.stringify(options[1])}.`);
+      t.fail(`${filename} parseToEntries ${JSON.stringify(options[0])} does not match ${JSON.stringify(options[1])}.`);
     }
   }
 
@@ -64,9 +64,9 @@ filenames.forEach(filename => {
 
     // Do the test
     if (_.isEqual(x, y)) {
-      tap.pass(`${filename} parseToProperties ${JSON.stringify(options[0])} matches ${JSON.stringify(options[1])}.`);
+      t.pass(`${filename} parseToProperties ${JSON.stringify(options[0])} matches ${JSON.stringify(options[1])}.`);
     } else {
-      tap.fail(`${filename} parseToProperties ${JSON.stringify(options[0])} does not match ${JSON.stringify(options[1])}.`);
+      t.fail(`${filename} parseToProperties ${JSON.stringify(options[0])} does not match ${JSON.stringify(options[1])}.`);
     }
   }
 });

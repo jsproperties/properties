@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const _ = require('lodash');
-const tap = require('tap');
+const t = require('tap');
 
 const Properties = require('../..');
 const optionsToTest = require('./parser-options');
@@ -18,7 +18,7 @@ const gen = process.argv[2] === '--gen';
 // Get .properties test files
 let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
 if (!gen) {
-  tap.plan(filenames.length *
+  t.plan(filenames.length *
       (
         optionsToTest.length + // options for parseToEntries
         1                      // one more for parseToProperties
@@ -91,9 +91,9 @@ filenames.forEach(filename => {
 
       // Do the test
       if (_.isEqual(actualEntries, expectedEntries)) {
-        tap.pass(`${filename} parseToEntries ${JSON.stringify(options)} passed.`);
+        t.pass(`${filename} parseToEntries ${JSON.stringify(options)} passed.`);
       } else {
-        tap.fail(`${filename} parseToEntries ${JSON.stringify(options)} failed.`);
+        t.fail(`${filename} parseToEntries ${JSON.stringify(options)} failed.`);
       }
     }
 
@@ -109,9 +109,9 @@ filenames.forEach(filename => {
 
     // Do the test
     if (_.isEqual(actualEntries, snapshotEntries)) {
-      tap.pass(`${filename} parseToProperties passed.`);
+      t.pass(`${filename} parseToProperties passed.`);
     } else {
-      tap.fail(`${filename} parseToProperties failed.`);
+      t.fail(`${filename} parseToProperties failed.`);
     }
   }
 });
