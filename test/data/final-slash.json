@@ -2,8 +2,10 @@
   {
     "key": "foo",
     "element": "a\\\\b",
-    "original": "foo = a\\\\\\\n  b",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo = a\\\\\\\n  b",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 15,
@@ -38,8 +42,10 @@
   {
     "key": "bar",
     "element": "z",
-    "original": "bar = z\\\n",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "bar = z\\\n",
     "location": {
       "start": {
         "offset": 16,
@@ -56,8 +62,10 @@
   {
     "key": "baz",
     "element": "shh",
-    "original": "baz = shh\\",
+    "sep": " = ",
+    "indent": "",
     "eol": null,
+    "original": "baz = shh\\",
     "location": {
       "start": {
         "offset": 26,

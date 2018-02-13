@@ -2,8 +2,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Multiline element",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Multiline element",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": "foo",
     "element": "AaBbCc",
-    "original": "foo = Aa\\\n  Bb\\\nCc",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo = Aa\\\n  Bb\\\nCc",
     "location": {
       "start": {
         "offset": 20,
@@ -38,8 +42,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 39,
@@ -56,8 +62,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Multiline key",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Multiline key",
     "location": {
       "start": {
         "offset": 40,
@@ -74,8 +82,10 @@
   {
     "key": "bar001122",
     "element": "baz",
-    "original": "bar\\\n  00\\\n11\\\n  22 : baz",
+    "sep": " : ",
+    "indent": "",
     "eol": "\n",
+    "original": "bar\\\n  00\\\n11\\\n  22 : baz",
     "location": {
       "start": {
         "offset": 56,
@@ -92,8 +102,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 82,
@@ -110,8 +122,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Multiline separator",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Multiline separator",
     "location": {
       "start": {
         "offset": 83,
@@ -128,8 +142,10 @@
   {
     "key": "qux",
     "element": "quux",
-    "original": "qux \\\n = \\\n  quux",
+    "sep": " \\\n = \\\n  ",
+    "indent": "",
     "eol": "\n",
+    "original": "qux \\\n = \\\n  quux",
     "location": {
       "start": {
         "offset": 105,
@@ -146,8 +162,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 123,
@@ -164,8 +182,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Multiline key/element/separator",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Multiline key/element/separator",
     "location": {
       "start": {
         "offset": 124,
@@ -182,8 +202,10 @@
   {
     "key": "multilinename",
     "element": "multiline value",
-    "original": "multiline\\\n name \\\nmultiline \\\n value",
+    "sep": " \\\n",
+    "indent": "",
     "eol": "\n",
+    "original": "multiline\\\n name \\\nmultiline \\\n value",
     "location": {
       "start": {
         "offset": 158,

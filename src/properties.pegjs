@@ -9,10 +9,14 @@
 {
   // Whether to include blank and comment lines
   //options.all = true;
-  // Whether to include the original logical line
-  //options.original = true;
+  // Whether to include separator
+  //options.sep = true;
+  // Whether to include indentation
+  //options.indent = true;
   // Whether to include eol (end of line)
   //options.eol = true;
+  // Whether to include the original logical line
+  //options.original = true;
   // Whether to include location info
   //options.location = true;
 }
@@ -35,17 +39,19 @@ FullLine // logical line with eol
     }
 
 Line // logical line without eol
-  = _ CONT* line:(Comment / PropertyEntry) {
+  = indent:$(_ CONT*) line:(Comment / PropertyEntry) {
       if (!line) {
         if (options.all) {
           line = { key: null, element: null };
+          if (options.sep) line.sep = null;
         } else {
           return undefined;
         }
       }
 
-      if (options.original) line.original = text();
+      if (options.indent) line.indent = indent;
       if (options.eol) line.eol = null;
+      if (options.original) line.original = text();
       if (options.location) line.location = location();
 
       return line;
@@ -78,7 +84,9 @@ PropertyEntry
 
       // Property Entry:
       // Return an empty string for key and/or element if empty.
-      return { key: key || "", element: element || "" };
+      var property = { key: key || "", element: element || "" };
+      if (options.sep) property.sep = sep;
+      return property;
     }
 
 PropertyKey "PropertyKey"

@@ -154,8 +154,10 @@ All options default to `false`.
 Option     | Type    | Description
 ---------- | ------- | ----
 `all`      | boolean | Include empty and blank lines
-`original` | boolean | Include original logical line in output
+`sep`      | boolean | Include separator in output
+`indent`   | boolean | Include indentation in output
 `eol`      | boolean | Include eol (end of line) in output
+`original` | boolean | Include original logical line in output
 `location` | boolean | Include location info in output
 
 All options default to `false`.
@@ -171,11 +173,15 @@ Property   | Type           | Description
 ---------- | -------------- | ----
 `key`      | string \| null | Property Key
 `element`  | string \| null | Property Element (value)
-`original` | string         | (optional) The original *logical line* [\*] containing the property
+`sep`      | string \| null | (optional) The separator of the property
+`indent`   | string         | (optional) The indentation of the property
 `eol`      | string \| null | (optional) The eol (end of line) of the *logical line* [\*]
+`original` | string         | (optional) The original *logical line* [\*] containing the property
 `location` | Location       | (optional) The start and end position of the *logical line* [\*]
 
-Note: `key` and `element` will be `null` for blank and comment lines.
+Note: `key`, `element` and `sep` will be `null` for blank and comment lines.
+
+Note: `indent` is always a `string`, in the case of no indentation, it's an empty string.
 
 Note: `original` is always a `string`, in the case of blank line, it's an empty string.
 

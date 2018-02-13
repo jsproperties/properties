@@ -2,8 +2,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# LF as the line terminator; no final eol",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# LF as the line terminator; no final eol",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": "foo",
     "element": "bar",
-    "original": "foo = bar",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo = bar",
     "location": {
       "start": {
         "offset": 42,
@@ -38,8 +42,10 @@
   {
     "key": "baz",
     "element": "qux",
-    "original": "baz = qux",
+    "sep": " = ",
+    "indent": "",
     "eol": null,
+    "original": "baz = qux",
     "location": {
       "start": {
         "offset": 52,

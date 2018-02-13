@@ -2,8 +2,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Separated by equal sign (=)",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Separated by equal sign (=)",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": "foo1",
     "element": "bar1",
-    "original": "foo1=bar1",
+    "sep": "=",
+    "indent": "",
     "eol": "\n",
+    "original": "foo1=bar1",
     "location": {
       "start": {
         "offset": 30,
@@ -38,8 +42,10 @@
   {
     "key": "foo2",
     "element": "bar2",
-    "original": "foo2 =bar2",
+    "sep": " =",
+    "indent": "",
     "eol": "\n",
+    "original": "foo2 =bar2",
     "location": {
       "start": {
         "offset": 40,
@@ -56,8 +62,10 @@
   {
     "key": "foo3",
     "element": "bar3",
-    "original": "foo3= bar3",
+    "sep": "= ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo3= bar3",
     "location": {
       "start": {
         "offset": 51,
@@ -74,8 +82,10 @@
   {
     "key": "foo4",
     "element": "bar4",
-    "original": "foo4 = bar4",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo4 = bar4",
     "location": {
       "start": {
         "offset": 62,
@@ -92,8 +102,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 74,
@@ -110,8 +122,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Separated by colon (:)",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Separated by colon (:)",
     "location": {
       "start": {
         "offset": 75,
@@ -128,8 +142,10 @@
   {
     "key": "foo5",
     "element": "bar5",
-    "original": "foo5:bar5",
+    "sep": ":",
+    "indent": "",
     "eol": "\n",
+    "original": "foo5:bar5",
     "location": {
       "start": {
         "offset": 100,
@@ -146,8 +162,10 @@
   {
     "key": "foo6",
     "element": "bar6",
-    "original": "foo6 :bar6",
+    "sep": " :",
+    "indent": "",
     "eol": "\n",
+    "original": "foo6 :bar6",
     "location": {
       "start": {
         "offset": 110,
@@ -164,8 +182,10 @@
   {
     "key": "foo7",
     "element": "bar7",
-    "original": "foo7: bar7",
+    "sep": ": ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo7: bar7",
     "location": {
       "start": {
         "offset": 121,
@@ -182,8 +202,10 @@
   {
     "key": "foo8",
     "element": "bar8",
-    "original": "foo8 : bar8",
+    "sep": " : ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo8 : bar8",
     "location": {
       "start": {
         "offset": 132,
@@ -200,8 +222,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 144,
@@ -218,8 +242,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Separated by white spaces ([ \\t\\f])",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Separated by white spaces ([ \\t\\f])",
     "location": {
       "start": {
         "offset": 145,
@@ -236,8 +262,10 @@
   {
     "key": "foo9",
     "element": "bar9",
-    "original": "foo9 bar9",
+    "sep": " ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo9 bar9",
     "location": {
       "start": {
         "offset": 183,
@@ -254,8 +282,10 @@
   {
     "key": "foo10",
     "element": "bar10",
-    "original": "foo10\tbar10",
+    "sep": "\t",
+    "indent": "",
     "eol": "\n",
+    "original": "foo10\tbar10",
     "location": {
       "start": {
         "offset": 193,
@@ -272,8 +302,10 @@
   {
     "key": "foo11",
     "element": "bar11",
-    "original": "foo11\fbar11",
+    "sep": "\f",
+    "indent": "",
     "eol": "\n",
+    "original": "foo11\fbar11",
     "location": {
       "start": {
         "offset": 205,
@@ -290,8 +322,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 217,
@@ -308,8 +342,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Separated by new lines ([\\r\\n]) (empty value)",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Separated by new lines ([\\r\\n]) (empty value)",
     "location": {
       "start": {
         "offset": 218,
@@ -326,8 +362,10 @@
   {
     "key": "foo12",
     "element": "",
-    "original": "foo12",
+    "sep": "",
+    "indent": "",
     "eol": "\n",
+    "original": "foo12",
     "location": {
       "start": {
         "offset": 266,
@@ -344,8 +382,10 @@
   {
     "key": "foo13",
     "element": "",
-    "original": "foo13",
+    "sep": "",
+    "indent": "",
     "eol": "\n",
+    "original": "foo13",
     "location": {
       "start": {
         "offset": 272,
@@ -362,8 +402,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 278,
@@ -380,8 +422,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Separated by eof (empty value)",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Separated by eof (empty value)",
     "location": {
       "start": {
         "offset": 279,
@@ -398,8 +442,10 @@
   {
     "key": "foo14",
     "element": "",
-    "original": "foo14",
+    "sep": "",
+    "indent": "",
     "eol": null,
+    "original": "foo14",
     "location": {
       "start": {
         "offset": 312,

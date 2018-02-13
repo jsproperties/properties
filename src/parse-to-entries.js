@@ -5,8 +5,10 @@ import { parseOptions } from './options';
 
 const parseToEntriesOptions = [
   'all',        // Include empty and blank lines
-  'original',   // Include original logical line in output
+  'sep',        // Include separator in output
+  'indent',     // Include indentation in output
   'eol',        // Include eol (end of line) in output
+  'original',   // Include original logical line in output
   'location',   // Include location info in output
 ];
 

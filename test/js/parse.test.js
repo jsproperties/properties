@@ -34,8 +34,10 @@ filenames.forEach(filename => {
     // Parse with all options on
     let options = {
       all: true,
-      original: true,
+      sep: true,
+      indent: true,
       eol: true,
+      original: true,
       location: true,
     };
 
@@ -78,11 +80,17 @@ filenames.forEach(filename => {
           return e.key != null && e.element != null;
         });
       }
-      if (!options.original) {
-        expectedEntries.forEach(e => delete e.original);
+      if (!options.sep) {
+        expectedEntries.forEach(e => delete e.sep);
+      }
+      if (!options.indent) {
+        expectedEntries.forEach(e => delete e.indent);
       }
       if (!options.eol) {
         expectedEntries.forEach(e => delete e.eol);
+      }
+      if (!options.original) {
+        expectedEntries.forEach(e => delete e.original);
       }
       if (!options.location) {
         expectedEntries.forEach(e => delete e.location);

@@ -2,8 +2,10 @@
   {
     "key": "foo",
     "element": "A.B.C",
-    "original": "foo = A.B.C",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo = A.B.C",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": "foo.bar",
     "element": "abc",
-    "original": "foo.bar : abc",
+    "sep": " : ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo.bar : abc",
     "location": {
       "start": {
         "offset": 12,
@@ -38,8 +42,10 @@
   {
     "key": "foo.baz",
     "element": "def",
-    "original": "foo.baz   def",
+    "sep": "   ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo.baz   def",
     "location": {
       "start": {
         "offset": 26,
@@ -56,8 +62,10 @@
   {
     "key": "qux.quux",
     "element": "quuz",
-    "original": "qux.quux = quuz",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "qux.quux = quuz",
     "location": {
       "start": {
         "offset": 40,
@@ -74,8 +82,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 56,
@@ -92,8 +102,10 @@
   {
     "key": "a.b1",
     "element": "a.b1",
-    "original": "a.b1 = a.b1",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "a.b1 = a.b1",
     "location": {
       "start": {
         "offset": 57,
@@ -110,8 +122,10 @@
   {
     "key": "a.b2.c1",
     "element": "a.b2.c1",
-    "original": "a.b2.c1 = a.b2.c1",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "a.b2.c1 = a.b2.c1",
     "location": {
       "start": {
         "offset": 69,
@@ -128,8 +142,10 @@
   {
     "key": "a.b2.c2",
     "element": "a.b2.c2",
-    "original": "a.b2.c2 = a.b2.c2",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "a.b2.c2 = a.b2.c2",
     "location": {
       "start": {
         "offset": 87,

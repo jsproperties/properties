@@ -42,8 +42,10 @@ export function stringifyFromProperties(
 
 // Entry
 interface EntryBase {
-  original?: string;
+  sep?: string | null;
+  indent?: string;
   eol?: string | null;
+  original?: string;
   location?: Location;
 }
 export interface PropertyEntry extends EntryBase {
@@ -98,8 +100,10 @@ interface Options {
  */
 export interface IParseToEntriesOptions extends Options {
   all?: boolean;
-  original?: boolean;
+  sep?: boolean;
+  indent?: boolean;
   eol?: boolean;
+  original?: boolean;
   location?: boolean;
 }
 

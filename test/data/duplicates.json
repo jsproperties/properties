@@ -2,8 +2,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Duplicate keys",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Duplicate keys",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": "foo",
     "element": "bar",
-    "original": "foo = bar",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo = bar",
     "location": {
       "start": {
         "offset": 17,
@@ -38,8 +42,10 @@
   {
     "key": "foo",
     "element": "baz",
-    "original": "foo = baz",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo = baz",
     "location": {
       "start": {
         "offset": 27,
@@ -56,8 +62,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 37,
@@ -74,8 +82,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Duplicate elements",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Duplicate elements",
     "location": {
       "start": {
         "offset": 38,
@@ -92,8 +102,10 @@
   {
     "key": "qux",
     "element": "quuz",
-    "original": "qux = quuz",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "qux = quuz",
     "location": {
       "start": {
         "offset": 59,
@@ -110,8 +122,10 @@
   {
     "key": "quux",
     "element": "quuz",
-    "original": "quux = quuz",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "quux = quuz",
     "location": {
       "start": {
         "offset": 70,
@@ -128,8 +142,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 82,
@@ -146,8 +162,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Duplicate key and element pairs",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Duplicate key and element pairs",
     "location": {
       "start": {
         "offset": 83,
@@ -164,8 +182,10 @@
   {
     "key": "dup",
     "element": "duplicate",
-    "original": "dup = duplicate",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "dup = duplicate",
     "location": {
       "start": {
         "offset": 117,
@@ -182,8 +202,10 @@
   {
     "key": "dup",
     "element": "duplicate",
-    "original": "dup : duplicate",
+    "sep": " : ",
+    "indent": "",
     "eol": "\n",
+    "original": "dup : duplicate",
     "location": {
       "start": {
         "offset": 133,

@@ -2,8 +2,10 @@
   {
     "key": "a\\=b",
     "element": "c\\=d=e",
-    "original": "a\\=b = c\\=d=e",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "a\\=b = c\\=d=e",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": "f\\:g",
     "element": "h\\:i:j",
-    "original": "f\\:g : h\\:i:j",
+    "sep": " : ",
+    "indent": "",
     "eol": "\n",
+    "original": "f\\:g : h\\:i:j",
     "location": {
       "start": {
         "offset": 14,
@@ -38,8 +42,10 @@
   {
     "key": "k\\ l",
     "element": "m\\ n o",
-    "original": "k\\ l   m\\ n o",
+    "sep": "   ",
+    "indent": "",
     "eol": "\n",
+    "original": "k\\ l   m\\ n o",
     "location": {
       "start": {
         "offset": 28,
@@ -56,8 +62,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 42,
@@ -74,8 +82,10 @@
   {
     "key": "f\\to\\to",
     "element": "b\\fa\\fr",
-    "original": "f\\to\\to = b\\fa\\fr",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "f\\to\\to = b\\fa\\fr",
     "location": {
       "start": {
         "offset": 43,
@@ -92,8 +102,10 @@
   {
     "key": "f\\ro\\ro",
     "element": "b\\na\\nr",
-    "original": "f\\ro\\ro = b\\na\\nr",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "f\\ro\\ro = b\\na\\nr",
     "location": {
       "start": {
         "offset": 61,
@@ -110,8 +122,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 79,
@@ -128,8 +142,10 @@
   {
     "key": "a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z",
     "element": "a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z",
-    "original": "a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z = a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z = a\\ab\\bc\\cd\\de\\ef\\fg\\gh\\hi\\ij\\jk\\kl\\lm\\mn\\no\\op\\pq\\qr\\rs\\st\\tv\\vw\\wx\\xy\\yz\\z",
     "location": {
       "start": {
         "offset": 80,
@@ -146,8 +162,10 @@
   {
     "key": "u\\u1234u",
     "element": "u\\u5678u",
-    "original": "u\\u1234u = u\\u5678u",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "u\\u1234u = u\\u5678u",
     "location": {
       "start": {
         "offset": 234,
@@ -164,8 +182,10 @@
   {
     "key": "u\\uabcdu",
     "element": "u\\ucdefu",
-    "original": "u\\uabcdu = u\\ucdefu",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "u\\uabcdu = u\\ucdefu",
     "location": {
       "start": {
         "offset": 254,
@@ -182,8 +202,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "",
     "location": {
       "start": {
         "offset": 274,
@@ -200,8 +222,10 @@
   {
     "key": "U\\UWXYZU",
     "element": "U\\UghijU",
-    "original": "U\\UWXYZU = U\\UghijU",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "U\\UWXYZU = U\\UghijU",
     "location": {
       "start": {
         "offset": 275,

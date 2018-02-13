@@ -17,10 +17,14 @@ const parseToEntriesOptionPairs = [
   [false, { '': false }],
   [true, { '': true }],
   [{}, { '': false }],
-  [{ '': false }, { all: false, original: false, eol: false, location: false }],
-  [{ '': true }, { all: true, original: true, eol: true, location: true }],
-  [{ '': true, all: false }, { all: false, original: true, eol: true, location: true }],
-  [{ '': false, original: true }, { all: false, original: true, eol: false, location: false }],
+  [{ '': false }, { all: false, sep: false, indent: false, eol: false, original: false, location: false }],
+  [{ '': true }, { all: true, sep: true, indent: true, eol: true, original: true, location: true }],
+  [{ '': true, all: false }, { all: false, sep: true, indent: true, eol: true, original: true, location: true }],
+  [{ '': false, sep: true }, { all: false, sep: true, indent: false, eol: false, original: false, location: false }],
+  [{ '': true, indent: false }, { all: true, sep: true, indent: false, eol: true, original: true, location: true }],
+  [{ '': true, eol: false }, { all: true, sep: true, indent: true, eol: false, original: true, location: true }],
+  [{ '': false, original: true }, { all: false, sep: false, indent: false, eol: false, original: true, location: false }],
+  [{ '': false, sep: true, indent: true, eol: true }, { all: false, sep: true, indent: true, eol: true, original: false, location: false }],
 ];
 
 const parseToPropertiesOptionPairs = [

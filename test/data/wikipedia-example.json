@@ -2,8 +2,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# You are reading the \".properties\" entry.",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# You are reading the \".properties\" entry.",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": null,
     "element": null,
-    "original": "! The exclamation mark can also mark text as comments.",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "! The exclamation mark can also mark text as comments.",
     "location": {
       "start": {
         "offset": 43,
@@ -38,8 +42,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# The key characters =, and : should be written with",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# The key characters =, and : should be written with",
     "location": {
       "start": {
         "offset": 98,
@@ -56,8 +62,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# a preceding backslash to ensure that they are properly loaded.",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# a preceding backslash to ensure that they are properly loaded.",
     "location": {
       "start": {
         "offset": 151,
@@ -74,8 +82,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# However, there is no need to precede the value characters =, and : by a backslash.",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# However, there is no need to precede the value characters =, and : by a backslash.",
     "location": {
       "start": {
         "offset": 216,
@@ -92,8 +102,10 @@
   {
     "key": "website",
     "element": "https://en.wikipedia.org/",
-    "original": "website = https://en.wikipedia.org/",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "website = https://en.wikipedia.org/",
     "location": {
       "start": {
         "offset": 301,
@@ -110,8 +122,10 @@
   {
     "key": "language",
     "element": "English",
-    "original": "language = English",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "language = English",
     "location": {
       "start": {
         "offset": 337,
@@ -128,8 +142,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# The backslash below tells the application to continue reading",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# The backslash below tells the application to continue reading",
     "location": {
       "start": {
         "offset": 356,
@@ -146,8 +162,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# the value onto the next line.",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# the value onto the next line.",
     "location": {
       "start": {
         "offset": 420,
@@ -164,8 +182,10 @@
   {
     "key": "message",
     "element": "Welcome to Wikipedia!",
-    "original": "message = Welcome to \\\n          Wikipedia!",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "message = Welcome to \\\n          Wikipedia!",
     "location": {
       "start": {
         "offset": 452,
@@ -182,8 +202,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Add spaces to the key",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Add spaces to the key",
     "location": {
       "start": {
         "offset": 496,
@@ -200,8 +222,10 @@
   {
     "key": "key\\ with\\ spaces",
     "element": "This is the value that could be looked up with the key \"key with spaces\".",
-    "original": "key\\ with\\ spaces = This is the value that could be looked up with the key \"key with spaces\".",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "key\\ with\\ spaces = This is the value that could be looked up with the key \"key with spaces\".",
     "location": {
       "start": {
         "offset": 520,
@@ -218,8 +242,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# Unicode",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# Unicode",
     "location": {
       "start": {
         "offset": 614,
@@ -236,8 +262,10 @@
   {
     "key": "tab",
     "element": "\\u0009",
-    "original": "tab : \\u0009",
+    "sep": " : ",
+    "indent": "",
     "eol": "\n",
+    "original": "tab : \\u0009",
     "location": {
       "start": {
         "offset": 624,
@@ -254,8 +282,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# If you want your property to include a backslash, it should be escaped by another backslash",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# If you want your property to include a backslash, it should be escaped by another backslash",
     "location": {
       "start": {
         "offset": 637,
@@ -272,8 +302,10 @@
   {
     "key": "path",
     "element": "c:\\\\wiki\\\\templates",
-    "original": "path=c:\\\\wiki\\\\templates",
+    "sep": "=",
+    "indent": "",
     "eol": "\n",
+    "original": "path=c:\\\\wiki\\\\templates",
     "location": {
       "start": {
         "offset": 731,
@@ -290,8 +322,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# However, some editors will handle this automatically",
+    "sep": null,
+    "indent": "",
     "eol": "\n",
+    "original": "# However, some editors will handle this automatically",
     "location": {
       "start": {
         "offset": 756,

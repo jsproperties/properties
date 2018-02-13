@@ -2,8 +2,10 @@
   {
     "key": null,
     "element": null,
-    "original": "# CR or LF or CRLF as the line terminator",
+    "sep": null,
+    "indent": "",
     "eol": "\r",
+    "original": "# CR or LF or CRLF as the line terminator",
     "location": {
       "start": {
         "offset": 0,
@@ -20,8 +22,10 @@
   {
     "key": "foo",
     "element": "bar",
-    "original": "foo = bar",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "foo = bar",
     "location": {
       "start": {
         "offset": 42,
@@ -38,8 +42,10 @@
   {
     "key": "baz",
     "element": "qux",
-    "original": "baz = qux",
+    "sep": " = ",
+    "indent": "",
     "eol": "\r\n",
+    "original": "baz = qux",
     "location": {
       "start": {
         "offset": 52,
@@ -56,8 +62,10 @@
   {
     "key": "quux",
     "element": "quuz",
-    "original": "quux = quuz",
+    "sep": " = ",
+    "indent": "",
     "eol": "\n",
+    "original": "quux = quuz",
     "location": {
       "start": {
         "offset": 63,
@@ -74,8 +82,10 @@
   {
     "key": null,
     "element": null,
-    "original": "",
+    "sep": null,
+    "indent": "",
     "eol": "\r",
+    "original": "",
     "location": {
       "start": {
         "offset": 75,
