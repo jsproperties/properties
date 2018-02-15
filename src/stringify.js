@@ -24,8 +24,10 @@ export function stringifyFromEntries(entries, options) {
 
   let output = '';
   for (let entry of entries) {
-    let sep = entry.sep || options.sep;
-    let eol = 'eol' in entry
+    const { key, element } = entry;
+    const sep = entry.sep || options.sep;
+    const indent = entry.indent || '';
+    const eol = 'eol' in entry
       ? entry.eol || ''   // Use empty string in case eol is null.
       : options.eol;
 
@@ -34,8 +36,8 @@ export function stringifyFromEntries(entries, options) {
       output += entry.original;
     } else {
       // Output a blank line for blank and comment entry
-      output += entry.key == null || entry.element == null
-        ? '' : entry.key + sep + entry.element;
+      output += key == null || element == null
+        ? '' : indent + key + sep + element;
     }
 
     output += eol;
