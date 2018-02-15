@@ -57,9 +57,9 @@ windows:
   - src:
       root: src
       panes: tree
-  - lib:
-      root: lib
+  - cjs:
+      root: cjs
       panes: tree
-  - dist:
-      root: dist
+  - umd:
+      root: umd
       panes: tree

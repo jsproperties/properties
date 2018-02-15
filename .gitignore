@@ -6,6 +6,6 @@ node_modules/
 
 # Built files
 /src/properties.pegjs.js
-/lib/*
-/dist/*
+/cjs/*
+/umd/*
 !.keep

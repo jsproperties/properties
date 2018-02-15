@@ -15,16 +15,16 @@
   "bugs": "https://github.com/jsproperties/properties/issues",
   "license": "MIT",
   "author": "pallxk <github@pallxk.com>",
-  "main": "lib/index.js",
+  "main": "cjs/index.js",
   "types": "types/index.d.ts",
   "files": [
     "src/*.js",
     "src/*.pegjs",
     "types/*.ts",
-    "lib/*.js",
-    "lib/*.map",
-    "dist/*.js",
-    "dist/*.map"
+    "cjs/*.js",
+    "cjs/*.map",
+    "umd/*.js",
+    "umd/*.map"
   ],
   "scripts": {
     "test": "yon run lint && yon run tap",
@@ -35,8 +35,8 @@
     "watch": "yon run pegjs:watch & yon run babel:watch & yon run webpack:watch",
     "pegjs": "pegjs -o src/properties.pegjs.js src/properties.pegjs",
     "pegjs:watch": "npm-watch pegjs",
-    "babel": "babel -s -d lib src",
-    "babel:watch": "babel -w -s -d lib src",
+    "babel": "babel -s -d cjs src",
+    "babel:watch": "babel -w -s -d cjs src",
     "webpack": "webpack --config webpack.dev.js && webpack --config webpack.prod.js",
     "webpack:watch": "webpack -w --config webpack.dev.js"
   },
