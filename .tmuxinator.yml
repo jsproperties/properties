@@ -46,12 +46,12 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - yarn run pegjs:watch
-        - yarn run babel:watch
-        - yarn run webpack:watch
+        - npm run pegjs:watch
+        - npm run babel:watch
+        - npm run webpack:watch
   - test:
       root: test
-      panes: yarn test
+      panes: npm test
   - root:
       panes: git status
   - src:
