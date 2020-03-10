@@ -2,9 +2,9 @@ language: node_js
 node_js:
   - "node"
   - "lts/*"
-  - "4"
-  - "6"
-  - "8"
+  - 10
+  - 12
+  - 13
 cache: yarn
 script:
   - npm run lint
