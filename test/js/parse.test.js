@@ -15,7 +15,7 @@ const rproperties = /\.properties$/;
 const gen = process.argv[2] === '--gen';
 
 // Get .properties test files
-let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
+const filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
 if (!gen) {
   t.plan(filenames.length *
       (
@@ -27,12 +27,12 @@ if (!gen) {
 // Parse, and snapshot or compare
 filenames.forEach(filename => {
   // Get input
-  let input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
+  const input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
 
   // Write output or do the test
   if (gen) {
     // Parse with all options on
-    let options = {
+    const options = {
       all: true,
       sep: true,
       indent: true,
@@ -67,9 +67,9 @@ filenames.forEach(filename => {
     let snapshotEntries = JSON.parse(snapshotString);
 
     // Test each options used by parseToEntries
-    for (let options of optionsToTest) {
+    for (const options of optionsToTest) {
       // Generate output
-      let actualEntries = Properties.parseToEntries(input, options);
+      const actualEntries = Properties.parseToEntries(input, options);
 
       // Make a clone as we are going to modify what's expected
       let expectedEntries = JSON.parse(JSON.stringify(snapshotEntries));
@@ -109,7 +109,7 @@ filenames.forEach(filename => {
     snapshotEntries = JSON.parse(snapshotString);
 
     // Generate output
-    let actualEntries = Properties.parseToProperties(input);
+    const actualEntries = Properties.parseToProperties(input);
 
     // Do the test
     t.strictSame(actualEntries, snapshotEntries,

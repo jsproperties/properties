@@ -1,7 +1,7 @@
 'use strict';
 
 const optionNames = ['all', 'sep', 'indent', 'eol', 'original', 'location'];
-let optionsToTest = [];
+const optionsToTest = [];
 
 for (let i = 0; i < Math.pow(optionNames.length, 2); ++i) {
   optionsToTest.push({

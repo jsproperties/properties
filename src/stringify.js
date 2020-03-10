@@ -23,7 +23,7 @@ export function stringifyFromEntries(entries, options) {
   options = parseOptions(options);
 
   let output = '';
-  for (let entry of entries) {
+  for (const entry of entries) {
     const { key, element } = entry;
     const sep = entry.sep || options.sep;
     const indent = entry.indent || '';
@@ -56,8 +56,8 @@ export function stringifyFromProperties(properties, options) {
   options = parseOptions(options);
 
   let output = '';
-  for (let key in properties) {
-    let element = properties[key];
+  for (const key in properties) {
+    const element = properties[key];
     if (typeof element === 'string') {
       if (options.namespace) {
         output += escapeKey(options.namespace);
@@ -73,7 +73,7 @@ export function stringifyFromProperties(properties, options) {
           options.eol;
     } else {
       // Namespaced properties
-      let namespace = options.namespace
+      const namespace = options.namespace
         ? options.namespace + '.' + key
         : key;
       output += stringifyFromProperties(element,

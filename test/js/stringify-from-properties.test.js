@@ -11,21 +11,21 @@ const dataDir = path.resolve(__dirname, '../data');
 const rproperties = /\.properties$/;
 
 // Get .properties test files
-let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
+const filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
 t.plan(filenames.length);
 
 // Stringify and compare
 filenames.forEach(filename => {
   // Read parsed properties
-  let parsedProperties = JSON.parse(
+  const parsedProperties = JSON.parse(
       fs.readFileSync(path.join(dataDir, filename + '.json'), 'utf8'));
 
   // Get expected output
-  let expectedString = fs.readFileSync(
+  const expectedString = fs.readFileSync(
       path.join(dataDir, filename), 'utf8');
 
   // Stringify
-  let actualString = Properties.stringify(parsedProperties);
+  const actualString = Properties.stringify(parsedProperties);
 
   // Do the test
   // Parsed stringified output is compared here, as stringified output from

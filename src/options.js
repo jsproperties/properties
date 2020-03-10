@@ -11,7 +11,7 @@ export function parseOptions(options, availableOptionNames) {
   // `true` is a shortcut to turn all options on
   if (options === true) {
     options = {};
-    for (let option of availableOptionNames) {
+    for (const option of availableOptionNames) {
       options[option] = true;
     }
     return options;
@@ -20,7 +20,7 @@ export function parseOptions(options, availableOptionNames) {
   // { '': true } is also a shorcut to turn all options on, while allow
   // individual options to be turned off by setting them explicitly.
   if (typeof options[''] === 'boolean') {
-    for (let option of availableOptionNames) {
+    for (const option of availableOptionNames) {
       if (!(option in options)) {
         options[option] = options[''];
       }

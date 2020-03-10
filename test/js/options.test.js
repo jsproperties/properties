@@ -40,17 +40,17 @@ const parseToPropertiesOptionPairs = [
 ];
 
 // Get .properties test files
-let filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
+const filenames = fs.readdirSync(dataDir).filter(f => rproperties.test(f));
 
 // Parse and compare
 filenames.forEach(filename => {
   // Get input
-  let input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
+  const input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
 
   // Test each pair of options for parseToEntries
-  for (let options of parseToEntriesOptionPairs) {
-    let x = Properties.parseToEntries(input, options[0]);
-    let y = Properties.parseToEntries(input, options[1]);
+  for (const options of parseToEntriesOptionPairs) {
+    const x = Properties.parseToEntries(input, options[0]);
+    const y = Properties.parseToEntries(input, options[1]);
 
     // Do the test
     t.strictSame(x, y,
@@ -58,9 +58,9 @@ filenames.forEach(filename => {
   }
 
   // Test each pair of options for parseToProperties
-  for (let options of parseToPropertiesOptionPairs) {
-    let x = Properties.parseToProperties(input, options[0]);
-    let y = Properties.parseToProperties(input, options[1]);
+  for (const options of parseToPropertiesOptionPairs) {
+    const x = Properties.parseToProperties(input, options[0]);
+    const y = Properties.parseToProperties(input, options[1]);
 
     // Do the test
     t.strictSame(x, y,

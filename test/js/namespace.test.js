@@ -25,13 +25,13 @@ if (!gen) {
 // Parse, and snapshot or compare
 filenames.forEach(filename => {
   // Get input
-  let input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
+  const input = fs.readFileSync(path.join(dataDir, filename), 'utf8');
 
   // Write output or do the test
   if (gen) {
     // Generate output
-    let actualEntries = Properties.parseToProperties(input, options);
-    let actualString = JSON.stringify(actualEntries, null, 2);
+    const actualEntries = Properties.parseToProperties(input, options);
+    const actualString = JSON.stringify(actualEntries, null, 2);
 
     // Write output for later tests
     fs.writeFileSync(
@@ -39,12 +39,12 @@ filenames.forEach(filename => {
         actualString);
   } else {
     // Get snapshot output
-    let snapshotString = fs.readFileSync(
+    const snapshotString = fs.readFileSync(
         path.join(dataDir, filename + '.namespaced.json'), 'utf8');
-    let snapshotProperties = JSON.parse(snapshotString);
+    const snapshotProperties = JSON.parse(snapshotString);
 
     // Generate output
-    let actualProperties = Properties.parseToProperties(input, options);
+    const actualProperties = Properties.parseToProperties(input, options);
 
     // Test parseToProperties
     t.strictSame(actualProperties, snapshotProperties,

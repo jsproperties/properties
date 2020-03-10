@@ -29,7 +29,7 @@ export function parse(input, options) {
  * @returns {object} Parsed result in properties object.
  */
 export function parseToProperties(input, options) {
-  let entries = parseToEntries(input);
+  const entries = parseToEntries(input);
   return entriesToProperties(entries, options);
 }
 
@@ -41,9 +41,9 @@ export function parseToProperties(input, options) {
  */
 export function entriesToProperties(entries, options) {
   options = parseOptions(options, parseToPropertiesOptions);
-  let properties = {};
+  const properties = {};
 
-  for (let entry of entries) {
+  for (const entry of entries) {
     // Only key and element are relevant
     let { key, element } = entry;
 
@@ -57,7 +57,7 @@ export function entriesToProperties(entries, options) {
 
     // Assign to properties by key, later entries overwrite previous ones
     if (options.namespace) {
-      let namespacedKey = parseNamespace(key);
+      const namespacedKey = parseNamespace(key);
       let property = properties;
       namespacedKey.forEach((name, i) => {
         // This is the last component of the key
@@ -97,7 +97,7 @@ export function entriesToProperties(entries, options) {
  */
 function unescapeProperty(input) {
   // Unescape unicode
-  let output = input.replace(/\\u([0-9A-Fa-f]{0,4})/g, (match, code) => {
+  const output = input.replace(/\\u([0-9A-Fa-f]{0,4})/g, (match, code) => {
     if (code.length !== 4) throw new SyntaxError('Invalid Unicode escape sequence');
     return String.fromCharCode(parseInt(code, 16));
   });
