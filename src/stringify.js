@@ -23,13 +23,23 @@ export function stringifyFromEntries(entries, options) {
   options = parseOptions(options);
 
   let output = '';
+  /* Do we have no final EOL? */
+  let noeol = false;
   for (const entry of entries) {
     const { key, element } = entry;
     const sep = entry.sep || options.sep;
     const indent = entry.indent || '';
-    const eol = 'eol' in entry
-      ? entry.eol || ''   // Use empty string in case eol is null.
-      : options.eol;
+    const eol = 'eol' in entry ? entry.eol : options.eol;
+
+    // Final line has no eol, and we are appending more lines.
+    // Need to add an eol first.
+    if (noeol) {
+      output += eol;
+    }
+
+    if (!eol) {
+      noeol = true;
+    }
 
     // Prefer original if available
     if (entry.original != null) {
@@ -40,7 +50,10 @@ export function stringifyFromEntries(entries, options) {
         ? '' : indent + key + sep + element;
     }
 
-    output += eol;
+    // Keep noeol state
+    if (!noeol) {
+      output += eol;
+    }
   }
 
   return output;
