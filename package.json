@@ -1,6 +1,6 @@
 {
   "name": "@js.properties/properties",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "JavaScript .properties parser and stringifier",
   "keywords": [
     ".properties",
