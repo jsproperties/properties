@@ -1,6 +1,7 @@
 # Node.js
 node_modules/
 .nyc_output/
+*.tgz
 
 # Java
 *.class
