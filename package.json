@@ -27,6 +27,7 @@
     "umd/*.map"
   ],
   "scripts": {
+    "version": "npm run prepare && git add -f src cjs umd",
     "test": "npm run lint && npm run tap",
     "lint": "eslint .",
     "tap": "tap test/js/*.test.js",
