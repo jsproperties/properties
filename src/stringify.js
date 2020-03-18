@@ -25,11 +25,20 @@ export function stringifyFromEntries(entries, options) {
   let output = '';
   /* Do we have no final EOL? */
   let noeol = false;
+  /* Detected EOL in file */
+  let detectedEol = null;
   for (const entry of entries) {
     const { key, element } = entry;
     const sep = entry.sep || options.sep;
     const indent = entry.indent || '';
-    const eol = 'eol' in entry ? entry.eol : options.eol;
+    const eol = 'eol' in entry
+      ? entry.eol
+      : detectedEol || options.eol;   // Prefer detected eol
+
+    // Detect used EOL
+    if (entry.eol) {
+      detectedEol = entry.eol;
+    }
 
     // Final line has no eol, and we are appending more lines.
     // Need to add an eol first.
