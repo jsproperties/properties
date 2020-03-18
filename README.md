@@ -8,7 +8,7 @@ JavaScript .properties parser & stringifier
 [![npm](https://img.shields.io/npm/v/@js.properties/properties.svg)](https://www.npmjs.com/package/@js.properties/properties)
 [![license](https://img.shields.io/github/license/jsproperties/properties.svg)](LICENSE)
 
-This is a parser and stringifier written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/javase/9/docs/api/java/util/Properties.html#load-java.io.Reader-).
+This is a parser and stringifier written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Properties.html#load(java.io.Reader)).
 
 The parser can return parsed properties object ([`parse`](#parse) or [`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToEntries`](#parseToEntries)) as an array of entry objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
 
