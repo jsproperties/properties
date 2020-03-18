@@ -10,11 +10,11 @@ JavaScript .properties parser & stringifier
 
 This is a parser and stringifier written in JavaScript and [PEG.js](https://pegjs.org/) for Java .properties file format, following the syntax defined in [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Properties.html#load(java.io.Reader)).
 
-The parser can return parsed properties object ([`parse`](#parse) or [`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToEntries`](#parseToEntries)) as an array of entry objects which have `key`, `element`, `original`, `eol` and [`location`](#Location) as keys.
+The parser can return parsed properties object ([`parse`](#parse) or [`parseToProperites`](#parseToProperties)) in a flat structure or a hierarchical namespaced structure, or return raw parsing result ([`parseToEntries`](#parseToEntries)) as an array of entry objects which have `key`, `element`, `sep`, `indent`, `eol`, `original` and [`location`](#Location) as keys.
 
 As to the raw parsing result:
 
-* Each *logical line* of input .properties file is parsed into an object, with the **original** logical line, **eol** info, and/or line **location** info optionally kept;
+* Each *logical line* of input .properties file is parsed into an object, with the **original** logical line, **indent** **key** **sep** **element** **eol** parts, and/or line **location** info optionally kept;
 * Properties with duplicate keys are kept in the raw output so that one can build high-level applications reporting them;
 * Blank and comment lines can be kept as well so that there is no info loss of the original file after parsing. This could be useful for something like .properties IDE.
 
@@ -38,7 +38,7 @@ yarn add @js.properties/properties
 # Comment here
 hello = world
 
-foo : bar
+  foo : bar
 ```
 
 `demo.js` (Node.js):
@@ -50,8 +50,10 @@ const Properties = require('@js.properties/properties');
 const input = fs.readFileSync('example.properties', 'utf8');
 const options = {   // options is optional
   all: true,        // Include empty and blank lines
-  original: true,   // Include original logical line in output
+  sep: true,        // Include separator in output
+  indent: true,     // Include indentation in output
   eol: true,        // Include eol (end of line) in output
+  original: true,   // Include original logical line in output
   location: true,   // Include location info in output
 };
 let output = Properties.parseToEntries(input, options);
@@ -83,31 +85,35 @@ Output with all options on:
 [
   {
     "key": null, "element": null,
-    "original": "# Comment here", "eol": "\n",
+    "sep": null, "indent": "", "eol": "\n",
+    "original": "# Comment here",
     "location": {
       "start": { "offset":  0, "line": 1, "column":  1 },
       "end":   { "offset": 14, "line": 1, "column": 15 } }
   },
   {
     "key": "hello", "element": "world",
-    "original": "hello = world", "eol": "\n",
+    "sep": " = ", "indent": "", "eol": "\n",
+    "original": "hello = world",
     "location": {
       "start": { "offset": 15, "line": 2, "column":  1 },
       "end":   { "offset": 28, "line": 2, "column": 14 } }
   },
   {
     "key": null, "element": null,
-    "original": "", "eol": "\n",
+    "sep": null, "indent": "", "eol": "\n",
+    "original": "",
     "location": {
       "start": { "offset": 29, "line": 3, "column":  1 },
       "end":   { "offset": 29, "line": 3, "column":  1 } }
   },
   {
     "key": "foo", "element": "bar",
-    "original": "foo : bar", "eol": "\n",
+    "sep": " : ", "indent": "  ", "eol": "\n",
+    "original": "  foo : bar",
     "location": {
       "start": { "offset": 30, "line": 4, "column":  1 },
-      "end":   { "offset": 39, "line": 4, "column": 10 } }
+      "end":   { "offset": 41, "line": 4, "column": 12 } }
   }
 ]
 ```
