@@ -60,7 +60,6 @@
     "pegjs": "^0.10.0",
     "pegjs-loader": "^0.5.6",
     "tap": "^14.10.6",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-merge": "^4.2.2"
