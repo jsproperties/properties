@@ -1,3 +1,7 @@
+# We're using .js format of eslintrc, but using JSON syntax for object literals;
+# exclude it from lint, so that it will be easier if we switch to JSON format.
+.eslintrc.js
+
 src/*.pegjs.js
 cjs/
 umd/
